@@ -8,13 +8,15 @@ namespace Gladiateur
 {
     class Gladiateur
     {
+		//Attributs
         private string nom;
         private Arme equipement;
         private int point_arme;
         private int victoire;
         private int defaite;
         private float pc_victoire;
-     
+     	
+		//Constructeur
         public Gladiateur()
         {
 

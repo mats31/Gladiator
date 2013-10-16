@@ -8,6 +8,7 @@ namespace Gladiateur
 {
     class Joueur
     {
+		//Getters
 		private string _nom;
 		public string Nom
 		{
@@ -32,6 +33,7 @@ namespace Gladiateur
 			get { this._date = Datetime.Now; }
 		}
 
+		//Constructeur
 		private Joueur(string nom, string prenom, string alias)
 		{
 			this.Nom    = _nom;
@@ -40,6 +42,7 @@ namespace Gladiateur
 			this.Date   = _date;
 		}
 
+		//Méthodes
 		private void equiperGla()
 		{
 
