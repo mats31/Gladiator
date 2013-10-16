@@ -2,11 +2,11 @@ using System;
 
 namespace Gladiateur.Armes
 {
-	public class Lance: Arme, IAttaquer
+	public class Filet : Arme, IAttaquer
 	{
 		//Constructeur
-		public Lance ()
-			:base(7,true,false,2,50) 
+		public Filet ()
+			:base(3,true,false,1,30)
 		{
 		}
 
