@@ -1,0 +1,1 @@
+/Users/mathisbiabiany/Downloads/Gladiateur/Gladiateur/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
