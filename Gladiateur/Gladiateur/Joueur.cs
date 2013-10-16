@@ -34,12 +34,8 @@ namespace Gladiateur
 			protected set { this._date = DateTime.Now; }
 		}
 
-<<<<<<< HEAD
-		public Joueur(string nom, string prenom, string alias)
-=======
 		//Constructeur
 		private Joueur(string nom, string prenom, string alias)
->>>>>>> 7a64ceb3cfb46d3baf3b23ebd8cdbc82d90dbd84
 		{
 			this.Nom    = _nom;
 			this.Prenom = _prenom;
