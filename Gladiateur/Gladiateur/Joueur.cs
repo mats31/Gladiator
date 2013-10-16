@@ -34,11 +34,7 @@ namespace Gladiateur
 		}
 
 		//Constructeur
-		private Joueur(string nom, string prenom, string alias)
-<<<<<<< HEAD
->>>>>>> bb29b4a2d8bfe79da3421b89dbfb1a726068ec8f
-=======
->>>>>>> d10b5522e3948cac3e6a5811d74ad3f9d98a3a9f
+		public Joueur(string nom, string prenom, string alias)
 		{
 			this.Nom    = nom;
 			this.Prenom = prenom;
