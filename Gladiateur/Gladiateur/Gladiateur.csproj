@@ -56,8 +56,9 @@
     <Compile Include="Armes\Bouclier_rectangulaire.cs" />
     <Compile Include="Armes\Casque.cs" />
     <Compile Include="Armes\Dague.cs" />
-    <Compile Include="Armes\IAttaquer.cs" />
-    <Compile Include="Armes\IDefendre.cs" />
+    <Compile Include="Armes\Filet.cs" />
+    <Compile Include="Armes\Interface\IAttaquer.cs" />
+    <Compile Include="Armes\Interface\IDefendre.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -72,5 +73,6 @@
   -->
   <ItemGroup>
     <Folder Include="Armes\" />
+    <Folder Include="Armes\Interface\" />
   </ItemGroup>
 </Project>

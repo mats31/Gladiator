@@ -9,22 +9,23 @@ namespace Gladiateur
 {
     class Gladiateur
     {
-<<<<<<< HEAD
-=======
 		//Attributs
+<<<<<<< HEAD
 >>>>>>> bb29b4a2d8bfe79da3421b89dbfb1a726068ec8f
+=======
+>>>>>>> d10b5522e3948cac3e6a5811d74ad3f9d98a3a9f
         private string nom;
         private Arme equipement;
         private int point_arme;
         private int victoire;
         private int defaite;
         private float pc_victoire;
-<<<<<<< HEAD
-     
-=======
      	
 		//Constructeur
+<<<<<<< HEAD
 >>>>>>> bb29b4a2d8bfe79da3421b89dbfb1a726068ec8f
+=======
+>>>>>>> d10b5522e3948cac3e6a5811d74ad3f9d98a3a9f
         public Gladiateur()
         {
 

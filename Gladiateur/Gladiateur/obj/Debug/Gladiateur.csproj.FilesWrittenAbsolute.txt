@@ -4,3 +4,8 @@
 /Users/mathisbiabiany/Projects/Gladiator/Gladiateur/Gladiateur/bin/Debug/Gladiateur.exe
 /Users/mathisbiabiany/Projects/Gladiator/Gladiateur/Gladiateur/obj/Debug/Gladiateur.exe
 /Users/mathisbiabiany/Projects/Gladiator/Gladiateur/Gladiateur/obj/Debug/Gladiateur.exe.mdb
+/Applications/Gladiator/Gladiateur/Gladiateur/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Applications/Gladiator/Gladiateur/Gladiateur/obj/Debug/Gladiateur.exe
+/Applications/Gladiator/Gladiateur/Gladiateur/obj/Debug/Gladiateur.exe.mdb
+/Applications/Gladiator/Gladiateur/Gladiateur/bin/Debug/Gladiateur.exe.mdb
+/Applications/Gladiator/Gladiateur/Gladiateur/bin/Debug/Gladiateur.exe
