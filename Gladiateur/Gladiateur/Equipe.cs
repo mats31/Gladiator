@@ -8,6 +8,7 @@ namespace Gladiateur
 {
     class Equipe
     {
+		//Attributs
         private string nom;
         private string desc;
         private int match_joue;
@@ -15,11 +16,13 @@ namespace Gladiateur
         private int defaite;
         private float pc_victoire;
 
+		//Constructeur
         public Equipe(string nom, string desc)
         {
 
         }
 		/*
+		//Méthode
         public int joue()
         {
             this.match_joue++;
