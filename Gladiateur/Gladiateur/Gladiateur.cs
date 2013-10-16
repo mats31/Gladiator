@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-<<<<<<< HEAD
 using Gladiateur.Armes;
-=======
->>>>>>> 7a64ceb3cfb46d3baf3b23ebd8cdbc82d90dbd84
 
 namespace Gladiateur
 {
@@ -15,7 +12,7 @@ namespace Gladiateur
 <<<<<<< HEAD
 =======
 		//Attributs
->>>>>>> 7a64ceb3cfb46d3baf3b23ebd8cdbc82d90dbd84
+>>>>>>> bb29b4a2d8bfe79da3421b89dbfb1a726068ec8f
         private string nom;
         private Arme equipement;
         private int point_arme;
@@ -27,7 +24,7 @@ namespace Gladiateur
 =======
      	
 		//Constructeur
->>>>>>> 7a64ceb3cfb46d3baf3b23ebd8cdbc82d90dbd84
+>>>>>>> bb29b4a2d8bfe79da3421b89dbfb1a726068ec8f
         public Gladiateur()
         {
 
