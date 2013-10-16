@@ -1,10 +1,17 @@
 using System;
 
-namespace Gladiateur
+namespace Gladiateur.Armes
 {
 	public class Trident : IAttaquer, IDefendre
 	{
 		public Trident ()
+		{
+		}
+		public void Attaque()
+		{
+
+		}
+		public void Defendre()
 		{
 		}
 	}

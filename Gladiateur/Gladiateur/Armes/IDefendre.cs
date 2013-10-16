@@ -1,6 +1,6 @@
 using System;
 
-namespace Gladiateur
+namespace Gladiateur.Armes
 {
 	public interface IDefendre
 	{

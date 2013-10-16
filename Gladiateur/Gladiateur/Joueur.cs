@@ -27,12 +27,13 @@ namespace Gladiateur
 			protected set { this._alias = value; }
 		}
 		private DateTime _date;
-		public string Date
+		public DateTime Date
 		{
-			get { this._date = Datetime.Now; }
+			get { return this._date; }
+			protected set { this._date = DateTime.Now; }
 		}
 
-		private Joueur(string nom, string prenom, string alias)
+		public Joueur(string nom, string prenom, string alias)
 		{
 			this.Nom    = _nom;
 			this.Prenom = _prenom;

@@ -1,11 +1,15 @@
 using System;
 
-namespace Gladiateur
+namespace Gladiateur.Armes
 {
 	public class Lance: IAttaquer
 	{
 		public Lance ()
 		{
+		}
+		public void Attaque()
+		{
+
 		}
 	}
 }

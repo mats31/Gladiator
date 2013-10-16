@@ -1,10 +1,14 @@
 using System;
 
-namespace Gladiateur
+namespace Gladiateur.Armes
 {
 	public class Casque : IDefendre
 	{
 		public Casque ()
+		{
+		}
+
+		public void Defendre()
 		{
 		}
 	}
