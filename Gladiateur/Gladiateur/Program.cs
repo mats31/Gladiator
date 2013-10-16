@@ -10,6 +10,8 @@ namespace Gladiateur
     {
         static void Main(string[] args)
         {
+			//MAAAAATTTTTTOOOOUUU
+
 			Joueur l_Joueur1 = new Joueur("Biabiany", "Mathis", "Tisma93");
 			Joueur l_Joueur2 = new Joueur ("Bui", "Bernard", "BuiToni");
 
