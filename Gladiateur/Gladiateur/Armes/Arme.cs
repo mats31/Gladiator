@@ -2,8 +2,8 @@ using System;
 
 namespace Gladiateur.Armes
 {
+<<<<<<< HEAD
 	public abstract class Arme
-	{
 		//Constructeur
 		public Arme ()
 		{
@@ -50,10 +50,9 @@ namespace Gladiateur.Armes
 			get { return this._pc_touche; }
 			protected set { this._pc_touche = value; }
 		}
-
-		//Méthode
-		public abstract void Attaquer ();
-		public abstract void Defendre ();
+	
+		public abstract bool Attaquer ();
+		public abstract bool Defendre ();
 
 	}
 }

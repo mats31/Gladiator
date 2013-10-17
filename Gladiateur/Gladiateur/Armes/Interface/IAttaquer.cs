@@ -4,7 +4,7 @@ namespace Gladiateur.Armes
 {
 	public interface IAttaquer
 	{
-		void Attaquer();
+		bool Attaquer();
 	}
 }
 
