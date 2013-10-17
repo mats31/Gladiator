@@ -55,12 +55,20 @@ namespace Gladiateur
 				_listeArme = value;
 			}
 		}
+
+		private int _vie;
+		public int Vie
+		{
+			get { return this._vie; }
+			protected set { this._vie = value; }
+		}
      	
 		//Constructeur
         public Gladiateur(string nom)
         {
 			this.Nom = nom;
 			this.ListeArme = new List<Arme> ();
+			this.Vie = 1;
         }
 
 		public string equipeGlad()
