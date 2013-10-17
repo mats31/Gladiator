@@ -60,7 +60,7 @@ namespace Gladiateur
 		public int Vie
 		{
 			get { return this._vie; }
-			protected set { this._vie = value; }
+			set { this._vie = value; }
 		}
      	
 		//Constructeur

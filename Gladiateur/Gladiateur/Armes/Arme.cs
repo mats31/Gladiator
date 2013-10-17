@@ -2,8 +2,8 @@ using System;
 
 namespace Gladiateur.Armes
 {
-<<<<<<< HEAD
-	public abstract class Arme
+
+	public abstract class Arme {
 		//Constructeur
 		public Arme ()
 		{
