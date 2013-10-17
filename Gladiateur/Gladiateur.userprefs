@@ -1,15 +1,26 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Gladiateur/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Gladiateur/Equipe.cs">
     <Files>
-      <File FileName="Gladiateur/Armes/Casque.cs" Line="10" Column="4" />
-      <File FileName="Gladiateur/Program.cs" Line="7" Column="13" />
+      <File FileName="Gladiateur/Program.cs" Line="36" Column="57" />
+      <File FileName="Gladiateur/Joueur.cs" Line="17" Column="17" />
+      <File FileName="Gladiateur/Equipe.cs" Line="78" Column="111" />
+      <File FileName="Gladiateur/Gladiateur.cs" Line="49" Column="15" />
+      <File FileName="Gladiateur/Armes/Epee.cs" Line="16" Column="4" />
+      <File FileName="Gladiateur/Armes/Arme.cs" Line="14" Column="9" />
+      <File FileName="Gladiateur/Armes/Bouclier_rectangulaire.cs" Line="9" Column="8" />
+      <File FileName="Gladiateur/Armes/Casque.cs" Line="8" Column="8" />
+      <File FileName="Gladiateur/Armes/Dague.cs" Line="9" Column="18" />
+      <File FileName="Gladiateur/Armes/Lance.cs" Line="9" Column="18" />
+      <File FileName="Gladiateur/Armes/Petit_bouclier_rond.cs" Line="9" Column="18" />
+      <File FileName="Gladiateur/Armes/Trident.cs" Line="14" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
+        <State expanded="True">
           <Node name="Gladiateur" expanded="True">
             <Node name="Armes" expanded="True" />
+            <Node name="Equipe.cs" selected="True" />
           </Node>
         </State>
       </Pad>

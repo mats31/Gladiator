@@ -17,6 +17,13 @@ namespace Gladiateur
 			protected set { this._joueur = value; }
 		}
 
+		private Array _gladiateurs;
+		public Array Gladiateurs
+		{
+			get { return this._gladiateurs; }
+			protected set { this._gladiateurs = value; }
+		}
+
         private string _nom;
 		public string Nom
 		{
@@ -58,16 +65,17 @@ namespace Gladiateur
 		}
 
 		//Constructeur
-        public Equipe(Joueur joueur, string nom, string desc)
+        public Equipe(Joueur joueur, string nom, string desc, Array gladiateurs)
         {
-			this.Joueur = joueur;
-			this.Nom    = nom;
-			this.Desc = desc;
+			this.Joueur      = joueur;
+			this.Nom         = nom;
+			this.Desc        = desc;
+			this.Gladiateurs = gladiateurs;
         }
 
 		public string creerEquipe()
 		{
-			return(this.Joueur.Alias+" crée l'équipe \"" + this._nom + "\".");
+			return(this.Joueur.Alias+" crée l'équipe \"" + this._nom + "\".\nL'équipe comprend :\n\n"+ this.Gladiateurs); //REGARDE COMMENT ATTEINDRE LES PROPRIETES DE L'OBJET
 		}
 		/*
 		//Méthode

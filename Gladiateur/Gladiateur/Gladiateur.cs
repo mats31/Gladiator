@@ -10,17 +10,53 @@ namespace Gladiateur
     class Gladiateur
     {
 		//Attributs
-        private string nom;
-        private Arme equipement;
-        private int point_arme;
-        private int victoire;
-        private int defaite;
-        private float pc_victoire;
+        private string _nom;
+		public string Nom
+		{
+			get { return this._nom; }
+			protected set { this._nom = value; }
+		}
+
+		private Array _equipement;
+		public Array Equipement
+		{
+			get { return this._equipement; }
+			protected set { this._equipement = value; }
+		}
+        
+		private int _point_arme;
+		public int PointArme
+		{
+			get { return this._point_arme; }
+			protected set { this._point_arme = value; }
+		}
+
+        private int _victoire;
+		public int Victoire
+		{
+			get { return this._victoire; }
+			protected set { this._victoire = value; }
+		}
+
+        private int _defaite;
+		public int Defaite
+		{
+			get { return this._defaite; }
+			protected set { this._defaite = value; }
+		}
+
+        private float _pc_victoire;
+		public float PcVictoire
+		{
+			get { return this._pc_victoire; }
+			protected set { this._pc_victoire = value; }
+		}
      	
 		//Constructeur
-        public Gladiateur()
+        public Gladiateur(string nom, Array equipement)
         {
-
+			this._nom = nom;
+			this._equipement = equipement;
         }
 		/*
         public int gagne()
