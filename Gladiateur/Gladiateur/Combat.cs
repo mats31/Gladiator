@@ -16,6 +16,9 @@ namespace Gladiateur
 			this._gla2 = gla2;
 		}
 
+		//Getters-Setters
+
+
 		//Méthode
 		public Gladiateur quiCommence()
 		{		
