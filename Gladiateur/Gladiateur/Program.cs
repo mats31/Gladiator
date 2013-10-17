@@ -54,6 +54,7 @@ namespace Gladiateur
 			l_j2.ListeEquipe.Add(l_celtics);
 
 
+
 			//equipe -> gladiateur
 			l_bulls.ListeGladiateur.Add(l_rose);
 			l_bulls.ListeGladiateur.Add(l_noah);
@@ -86,6 +87,27 @@ namespace Gladiateur
 			l_green.ListeArme.Add(l_dague);
 			l_green.ListeArme.Add(l_dague);
 			l_green.ListeArme.Add(l_bouclier_rond);
+
+			Console.WriteLine(l_j1.connexionJoueurs());
+			Console.WriteLine(l_j2.connexionJoueurs());
+			Console.WriteLine ("\n");
+			Console.WriteLine(l_j1.createEquipe());
+			l_bulls.creerGlad ();
+			Console.WriteLine ("\n");
+			l_rose.equipeGlad ();
+			Console.WriteLine ("\n");
+			l_noah.equipeGlad ();
+			Console.WriteLine ("\n");
+			l_deng.equipeGlad ();
+			Console.WriteLine ("\n");
+			Console.WriteLine(l_j2.createEquipe());
+			l_celtics.creerGlad ();
+			Console.WriteLine ("\n");
+			l_rondo.equipeGlad ();
+			Console.WriteLine ("\n");
+			l_pierce.equipeGlad ();
+			Console.WriteLine ("\n");
+			l_green.equipeGlad ();
         }
     }
 }

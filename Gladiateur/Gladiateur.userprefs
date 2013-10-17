@@ -1,33 +1,27 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Gladiateur/Equipe.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Gladiateur/Program.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Gladiateur/Program.cs" Line="36" Column="57" />
-      <File FileName="Gladiateur/Joueur.cs" Line="17" Column="17" />
-      <File FileName="Gladiateur/Equipe.cs" Line="78" Column="111" />
-      <File FileName="Gladiateur/Gladiateur.cs" Line="49" Column="15" />
-      <File FileName="Gladiateur/Armes/Epee.cs" Line="16" Column="4" />
-      <File FileName="Gladiateur/Armes/Arme.cs" Line="14" Column="9" />
-      <File FileName="Gladiateur/Armes/Bouclier_rectangulaire.cs" Line="9" Column="8" />
-      <File FileName="Gladiateur/Armes/Casque.cs" Line="8" Column="8" />
+      <File FileName="Gladiateur/Program.cs" Line="82" Column="4" />
+      <File FileName="Gladiateur/Joueur.cs" Line="66" Column="98" />
+      <File FileName="Gladiateur/Equipe.cs" Line="90" Column="5" />
+      <File FileName="Gladiateur/Gladiateur.cs" Line="66" Column="27" />
+      <File FileName="Gladiateur/Armes/Epee.cs" Line="9" Column="12" />
+      <File FileName="Gladiateur/Armes/Arme.cs" Line="14" Column="20" />
+      <File FileName="Gladiateur/Armes/Bouclier_rectangulaire.cs" Line="9" Column="36" />
+      <File FileName="Gladiateur/Armes/Casque.cs" Line="9" Column="19" />
       <File FileName="Gladiateur/Armes/Dague.cs" Line="9" Column="18" />
       <File FileName="Gladiateur/Armes/Lance.cs" Line="9" Column="18" />
-      <File FileName="Gladiateur/Armes/Petit_bouclier_rond.cs" Line="9" Column="18" />
-      <File FileName="Gladiateur/Armes/Trident.cs" Line="14" Column="2" />
-=======
-      <File FileName="Gladiateur/Program.cs" Line="73" Column="25" />
-      <File FileName="Gladiateur/Joueur.cs" Line="44" Column="4" />
-      <File FileName="Gladiateur/Equipe.cs" Line="66" Column="1" />
-      <File FileName="Gladiateur/Gladiateur.cs" Line="20" Column="31" />
->>>>>>> 9d9d701a5c4a5926a1f8cc90e21118f1c6108d72
+      <File FileName="Gladiateur/Armes/Petit_bouclier_rond.cs" Line="9" Column="32" />
+      <File FileName="Gladiateur/Armes/Trident.cs" Line="9" Column="20" />
+      <File FileName="Gladiateur/Combat.cs" Line="7" Column="5" />
+      <File FileName="Gladiateur/Armes/Filet.cs" Line="9" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="Gladiateur" expanded="True">
+          <Node name="Gladiateur" expanded="True" selected="True">
             <Node name="Armes" expanded="True" />
-            <Node name="Equipe.cs" selected="True" />
           </Node>
         </State>
       </Pad>

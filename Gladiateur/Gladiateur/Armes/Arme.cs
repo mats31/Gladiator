@@ -9,8 +9,9 @@ namespace Gladiateur.Armes
 		{
 		}
 
-		public Arme (int _points, bool _attaque, bool _defense, int _initiative, float _pc_touche)
+		public Arme (string _nom, int _points, bool _attaque, bool _defense, int _initiative, float _pc_touche)
 		{
+			this.Nom = _nom;
 			this.Points = _points;
 			this.Attaque = _attaque;
 			this.Defense = _defense;
@@ -18,6 +19,13 @@ namespace Gladiateur.Armes
 			this.Pc_touche = _pc_touche;
 		}
 		//Getters-Setters
+
+		private string _nom;
+		public string Nom {
+			get { return this._nom; }
+			protected set { this._nom = value; }
+		}
+
 		private int _points;
 		public int Points {
 			get { return this._points; }

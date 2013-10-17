@@ -4,7 +4,7 @@ using Gladiateur.Armes;
 namespace Gladiateur
 {
 	public class Combat
-	{
+	{/*
 		//Attributs
 		private Gladiateur _gla1;
 		private Gladiateur _gla2;
@@ -50,12 +50,11 @@ namespace Gladiateur
 			}
 		}
 
-*/
 	//	public attaque(string armeDef)
 	//	{
 	//		   25
 	//	}
-
+*/ 
 	}
 }
 

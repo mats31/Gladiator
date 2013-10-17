@@ -6,7 +6,7 @@ namespace Gladiateur.Armes
 	{
 		//Constructeur
 		public Filet ()
-			:base(3,true,false,1,30)
+			:base("filet",3,true,false,1,30)
 		{
 		}
 

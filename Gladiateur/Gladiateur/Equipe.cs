@@ -80,6 +80,17 @@ namespace Gladiateur
 			this.ListeGladiateur = new List<Gladiateur> ();
         }
 
+		//Méthodes
+		public string creerGlad()
+		{
+
+			foreach (Gladiateur b_gladiateur in ListeGladiateur)
+			{
+				Console.WriteLine("\""+b_gladiateur.Nom+"\" rejoint l'équipe des "+this.Nom+".");
+			}
+
+			return null;
+		}
 		/*
 		//Méthode
         public int joue()
