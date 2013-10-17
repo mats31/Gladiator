@@ -6,7 +6,7 @@ namespace Gladiateur.Armes
 	{
 		//Constructeur
 		public Casque ()
-			:base(2,false,true,0,10)
+			:base("casque",2,false,true,0,10)
 		{
 		}
 

@@ -6,7 +6,7 @@ namespace Gladiateur.Armes
 	{
 		//Constructeur
 		public Petit_bouclier_rond ()
-			:base(5,false,true,0,20)
+			:base("petit bouclier rond",5,false,true,0,20)
 		{
 		}
 

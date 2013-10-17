@@ -62,6 +62,17 @@ namespace Gladiateur
 			this.Nom = nom;
 			this.ListeArme = new List<Arme> ();
         }
+
+		public string equipeGlad()
+		{
+
+			foreach (Arme b_arme in ListeArme)
+			{
+				Console.WriteLine("Le gladiateur \""+this.Nom+"\" s'équipe avec : "+b_arme.Nom+".");
+			}
+
+			return null;
+		}
 		/*
         public int gagne()
         {

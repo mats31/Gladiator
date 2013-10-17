@@ -52,5 +52,18 @@ namespace Gladiateur
 			this.Date   = _date;
 			this.ListeEquipe = new List<Equipe> ();
 		}
+
+		//Méthodes
+		public string connexionJoueurs()
+		{
+			return("Le joueur \""+this._alias+"\" est maintenant connecté."); 
+		}
+
+		public string createEquipe()
+		{
+
+			//Permet d'obtenir la dernière équipe créé.
+			return(this._alias+" a créé l'équipe \""+this._listeEquipe[this._listeEquipe.Count-1].Nom+"\"."); 
+		}
     }
 }
