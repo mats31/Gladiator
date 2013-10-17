@@ -10,8 +10,10 @@ namespace Gladiateur
 		//Attributs
 		private Gladiateur _gla1;
 		private Gladiateur _gla2;
-		private List<Arme> _listeArmeAttaque  = new List<Arme> ();
-		private List<Arme> _listeArmeDefense  = new List<Arme> ();
+		private List<Arme> _listeArmeAttaque1  = new List<Arme> ();
+		private List<Arme> _listeArmeDefense1  = new List<Arme> ();
+		private List<Arme> _listeArmeAttaque2  = new List<Arme> ();
+		private List<Arme> _listeArmeDefense2  = new List<Arme> ();
 		private string _returnMagique;
 
 		//Constructeur
@@ -26,30 +28,52 @@ namespace Gladiateur
 		{	
 			//this._gla1.ListeArme[0]
 
-			//Récupère arme
+			//Récupère arme gla1
 			foreach (Arme b_arme in this._gla1.ListeArme) {
 				if (b_arme.Attaque == true) {
-					_listeArmeAttaque.Add (b_arme);
+					_listeArmeAttaque1.Add (b_arme);
 				}
 				if (b_arme.Defense == true) {
-					_listeArmeDefense.Add (b_arme);
+					_listeArmeDefense1.Add (b_arme);
 				}
 			}
 
-			//Affiche arme attaque
+			//Récupère arme gla2
+			foreach (Arme b_arme in this._gla2.ListeArme) {
+				if (b_arme.Attaque == true) {
+					_listeArmeAttaque2.Add (b_arme);
+				}
+				if (b_arme.Defense == true) {
+					_listeArmeDefense2.Add (b_arme);
+				}
+			}
+
+			//Return arme attaque
 			_returnMagique = "Les armes d\'attaques de " + _gla1.Nom + " sont \n";
-			foreach (Arme b_arme in this._listeArmeAttaque) {
+			foreach (Arme b_arme in this._listeArmeAttaque1) {
+				_returnMagique += b_arme.Nom+"\n";
+			}
+			//Return arme défense
+			_returnMagique += "Les armes de défense de " + _gla1.Nom + " sont \n";
+			foreach (Arme b_arme in this._listeArmeDefense1) {
 				_returnMagique += b_arme.Nom+"\n";
 			}
 
-			//Affiche arme défense
-			_returnMagique += "Les armes de défense de " + _gla1.Nom + " sont \n";
-			foreach (Arme b_arme in this._listeArmeDefense) {
+			//Return arme attaque
+			_returnMagique = "Les armes d\'attaques de " + _gla2.Nom + " sont \n";
+			foreach (Arme b_arme in this._listeArmeAttaque2) {
+				_returnMagique += b_arme.Nom+"\n";
+			}
+			//Return arme défense
+			_returnMagique += "Les armes de défense de " + _gla2.Nom + " sont \n";
+			foreach (Arme b_arme in this._listeArmeDefense2) {
 				_returnMagique += b_arme.Nom+"\n";
 			}
 
 			//returnMagique
-			return _returnMagique;
+			//return _returnMagique;
+
+
 		}
 
 
