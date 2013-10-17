@@ -12,37 +12,80 @@ namespace Gladiateur
     {
         static void Main(string[] args)
         {
- 
-			Joueur l_Joueur1 = new Joueur("Biabiany", "Mathis", "Tisma93");
-			Joueur l_Joueur2 = new Joueur ("Bui", "Bernard", "BuiToni");
+		//Instanciation objet
+			//joueur
+			Joueur l_j1 = new Joueur("Biabiany", "Mathis", "Tisma93");
+			Joueur l_j2 = new Joueur ("Bui", "Bernard", "BuiToni");
 
-			Bouclier_rectangulaire BouclierRectangulaire = new Bouclier_rectangulaire();
-			Casque Casque = new Casque();
-			Dague Dague = new Dague ();
-			Epee  Epee = new Epee ();
-			Filet Filet = new Filet ();
-			Lance Lance = new Lance ();
-			Petit_bouclier_rond Petit_bouclier_rond = new Petit_bouclier_rond ();
-			Trident Trident = new Trident ();
+			//equipe
+			Equipe l_bulls = new Equipe ("Chicago Bulls", "L'équipe des Bulls venu du United Center");
+			Equipe l_mavericks = new Equipe ("Dallas Mavericks", "L'équipe des Mavericks venu du American Airlines Center");
+			Equipe l_lakers = new Equipe ("Los Angeles Lakers", "L'équipe des Lakers venu du Staples Center");
 
-			object[] equipement = new object[] { Epee, Dague, Casque };
-			Gladiateur l_Gladiateur1_J1 = new Gladiateur ("Spartacus", equipement);
-			Gladiateur l_Gladiateur2_J1 = new Gladiateur ("Crixus", equipement);
-			Gladiateur l_Gladiateur3_J1 = new Gladiateur ("Oenemaus", equipement);
-			object[] gladiateursJ1 = new object[] { l_Gladiateur1_J1, l_Gladiateur2_J1, l_Gladiateur3_J1 };
-			Gladiateur l_Gladiateur1_J2 = new Gladiateur ("Asterix", equipement);
-			Gladiateur l_Gladiateur2_J2 = new Gladiateur ("Obelix", equipement);
-			Gladiateur l_Gladiateur3_J2 = new Gladiateur ("Panoramix", equipement);
-			object[] gladiateursJ2 = new object[] { l_Gladiateur1_J1, l_Gladiateur2_J2, l_Gladiateur3_J2 };
+			Equipe l_celtics = new Equipe ("Boston Celtics", "L'équipe des Celtics venu du TD Garden");
+			Equipe l_nuggets = new Equipe ("Denver Nuggets", "L'équipe des Nuggets venu du Pepsi Center");
+			Equipe l_spurs = new Equipe ("Spurs San Antonio", "L'équipe des Spurs venu du AT&T Center");
 
-			Equipe l_Equipe1_J1 = new Equipe (l_Joueur1, "Chicago Bulls", "L'équipe des Bulls venu du United Center", gladiateursJ1);
-			Equipe l_Equipe1_J2 = new Equipe (l_Joueur2, "Los Angeles Lakers", "L'équipe des Lakers venu du Staples Center", gladiateursJ2);
+			//gladiateur
+			Gladiateur l_rose = new Gladiateur ("Rose");
+			Gladiateur l_noah = new Gladiateur ("Noah");
+			Gladiateur l_deng = new Gladiateur ("Deng");
 
-			Console.WriteLine (l_Joueur1.creerJoueur());
-			Console.WriteLine (l_Joueur2.creerJoueur ());
+			Gladiateur l_rondo = new Gladiateur ("Rondo");
+			Gladiateur l_pierce = new Gladiateur ("Pierce");
+			Gladiateur l_green = new Gladiateur ("Green"); 
 
-			Console.WriteLine (l_Equipe1_J1.creerEquipe ());
-			Console.WriteLine (l_Equipe1_J2.creerEquipe ());
+			//arme
+			Filet l_filet = new Filet ();
+			Lance l_lance = new Lance ();
+			Epee l_epee = new Epee ();
+			Dague l_dague = new Dague ();
+
+			Trident l_trident = new Trident ();
+
+			Bouclier_rectangulaire l_bouclier_rectangle = new Bouclier_rectangulaire ();
+			Petit_bouclier_rond l_bouclier_rond = new Petit_bouclier_rond ();
+			Casque l_casque = new Casque ();
+
+
+		//Liste
+			//joueur -> equipe
+			l_j1.ListeEquipe.Add(l_bulls);
+			l_j2.ListeEquipe.Add(l_celtics);
+
+
+			//equipe -> gladiateur
+			l_bulls.ListeGladiateur.Add(l_rose);
+			l_bulls.ListeGladiateur.Add(l_noah);
+			l_bulls.ListeGladiateur.Add(l_deng);
+
+			l_celtics.ListeGladiateur.Add(l_rondo);
+			l_celtics.ListeGladiateur.Add(l_pierce);
+			l_celtics.ListeGladiateur.Add(l_green);	
+
+
+			//gladiateur -> arme
+			//Bulls
+			l_rose.ListeArme.Add(l_epee);
+			l_rose.ListeArme.Add(l_bouclier_rond);
+
+			l_noah.ListeArme.Add(l_dague);
+			l_noah.ListeArme.Add(l_bouclier_rectangle);
+
+			l_deng.ListeArme.Add(l_lance);
+			l_deng.ListeArme.Add(l_casque);
+
+			//Celtics
+			l_rondo.ListeArme.Add(l_trident);
+			l_rondo.ListeArme.Add(l_casque);
+
+			l_pierce.ListeArme.Add(l_filet);
+			l_pierce.ListeArme.Add(l_dague);
+			l_pierce.ListeArme.Add(l_casque);
+
+			l_green.ListeArme.Add(l_dague);
+			l_green.ListeArme.Add(l_dague);
+			l_green.ListeArme.Add(l_bouclier_rond);
         }
     }
 }

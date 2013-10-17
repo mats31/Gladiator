@@ -8,6 +8,7 @@ namespace Gladiateur
 {
     class Joueur
     {
+		//Getters-Setters
 		private string _nom;
 		public string Nom
 		{
@@ -32,6 +33,15 @@ namespace Gladiateur
 			get { return this._date; }
 			protected set { this._date = DateTime.Now; }
 		}
+		private List<Equipe> _listeEquipe;
+		public List<Equipe> ListeEquipe {
+			get {
+				return _listeEquipe;
+			}
+			set {
+				_listeEquipe = value;
+			}
+		}
 
 		//Constructeur
 		public Joueur(string nom, string prenom, string alias)
@@ -40,21 +50,7 @@ namespace Gladiateur
 			this.Prenom = prenom;
 			this.Alias  = alias;
 			this.Date   = _date;
-		}
-
-		public string creerJoueur()
-		{
-			return("Le joueur \"" + this._nom + "\" est connecté avec le pseudo "+this._alias);
-		}
-
-		private void equiperGla()
-		{
-
-		}
-
-		private void ordreGla()
-		{
-
+			this.ListeEquipe = new List<Equipe> ();
 		}
     }
 }
