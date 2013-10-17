@@ -7,7 +7,7 @@ using Gladiateur.Armes;
 
 namespace Gladiateur
 {
-    class Gladiateur
+    public class Gladiateur
     {
 		//Attributs
 

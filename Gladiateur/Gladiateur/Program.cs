@@ -86,6 +86,11 @@ namespace Gladiateur
 			l_green.ListeArme.Add(l_dague);
 			l_green.ListeArme.Add(l_dague);
 			l_green.ListeArme.Add(l_bouclier_rond);
+
+
+			//Combat
+			Combat l_bataille1 = new Combat (l_rose,l_rondo);
+			l_bataille1.quiCommence();
         }
     }
 }
