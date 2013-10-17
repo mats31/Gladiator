@@ -31,20 +31,20 @@ namespace Gladiateur
 			protected set { this._desc = value; }
 		}
 
-        private int _match_joue;
+        private int _match_joue=0;
 		public int matchJoue
 		{
 			get { return this._match_joue; }
 			protected set { this._match_joue = value; }
 		}
 
-        private int _victoire;
+        private int _victoire=0;
 		public int Victoire
 		{
 			get { return this._victoire; }
 			protected set { this._victoire = value; }
 		}
-        private int _defaite;
+        private int _defaite=0;
 		public int Defaite
 		{
 			get { return this._defaite; }
@@ -56,19 +56,24 @@ namespace Gladiateur
 			get { return this._pc_victoire; }
 			protected set { this._pc_victoire = value; }
 		}
+		private List<Gladiateur> _listeGladiateur;
+		public List<Gladiateur> ListeGladiateur {
+			get {
+				return _listeGladiateur;
+			}
+			set {
+				_listeGladiateur = value;
+			}
+		}
 
 		//Constructeur
-        public Equipe(Joueur joueur, string nom, string desc)
+        public Equipe(string nom, string desc)
         {
-			this.Joueur = joueur;
 			this.Nom    = nom;
 			this.Desc = desc;
+			this.ListeGladiateur = new List<Gladiateur> ();
         }
 
-		public string creerEquipe()
-		{
-			return(this.Joueur.Alias+" crée l'équipe \"" + this._nom + "\".");
-		}
 		/*
 		//Méthode
         public int joue()

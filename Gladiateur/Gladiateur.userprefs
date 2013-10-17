@@ -2,8 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Gladiateur/Program.cs">
     <Files>
-      <File FileName="Gladiateur/Armes/Casque.cs" Line="10" Column="4" />
-      <File FileName="Gladiateur/Program.cs" Line="7" Column="13" />
+      <File FileName="Gladiateur/Program.cs" Line="73" Column="25" />
+      <File FileName="Gladiateur/Joueur.cs" Line="44" Column="4" />
+      <File FileName="Gladiateur/Equipe.cs" Line="66" Column="1" />
+      <File FileName="Gladiateur/Gladiateur.cs" Line="20" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
