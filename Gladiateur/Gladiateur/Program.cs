@@ -88,12 +88,7 @@ namespace Gladiateur
 			l_green.ListeArme.Add(l_dague);
 			l_green.ListeArme.Add(l_bouclier_rond);
 
-<<<<<<< HEAD
-
-			//Combat
-			Combat l_bataille1 = new Combat (l_rose,l_rondo);
-			l_bataille1.quiCommence();
-=======
+			//Return - Création
 			Console.WriteLine(l_j1.connexionJoueurs());
 			Console.WriteLine(l_j2.connexionJoueurs());
 			Console.WriteLine ("\n");
@@ -114,7 +109,14 @@ namespace Gladiateur
 			l_pierce.equipeGlad ();
 			Console.WriteLine ("\n");
 			l_green.equipeGlad ();
->>>>>>> ee30f8079f782a62752175fc312cf5aede122ce0
+
+
+			//Combat
+			Combat l_bataille1 = new Combat (l_rose,l_rondo);
+			Console.WriteLine(l_bataille1.quiCommence());
+
+
+
         }
     }
 }

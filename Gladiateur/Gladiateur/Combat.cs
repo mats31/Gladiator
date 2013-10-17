@@ -6,12 +6,13 @@ using Gladiateur.Armes;
 namespace Gladiateur
 {
 	public class Combat
-	{/*
+	{
 		//Attributs
 		private Gladiateur _gla1;
 		private Gladiateur _gla2;
 		private List<Arme> _listeArmeAttaque  = new List<Arme> ();
 		private List<Arme> _listeArmeDefense  = new List<Arme> ();
+		private string _returnMagique;
 
 		//Constructeur
 		public Combat (Gladiateur gla1, Gladiateur gla2)
@@ -36,17 +37,19 @@ namespace Gladiateur
 			}
 
 			//Affiche arme attaque
-			Console.WriteLine ("Les armes d\'attaques de " + _gla1.Nom + " sont \n");
+			_returnMagique = "Les armes d\'attaques de " + _gla1.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeAttaque) {
-				Console.WriteLine (b_arme+"\n");
+				_returnMagique += b_arme.Nom+"\n";
 			}
 
 			//Affiche arme défense
-			Console.WriteLine ("Les armes de défense de " + _gla1.Nom + " sont \n");
+			_returnMagique += "Les armes de défense de " + _gla1.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeDefense) {
-				Console.WriteLine (b_arme+"\n");
+				_returnMagique += b_arme.Nom+"\n";
 			}
-	
+
+			//returnMagique
+			return _returnMagique;
 		}
 
 
@@ -83,18 +86,11 @@ namespace Gladiateur
 					arme2.attaquer(arme1);
 				}
 			}
-<<<<<<< HEAD
+
 			*/
 		
-=======
-		}
 
-	//	public attaque(string armeDef)
-	//	{
-	//		   25
-	//	}
-*/ 
->>>>>>> ee30f8079f782a62752175fc312cf5aede122ce0
+
 	}
 }
 
