@@ -116,7 +116,6 @@ namespace Gladiateur
 			Console.WriteLine(l_bataille1.quiCommence());
 
 
-
         }
     }
 }

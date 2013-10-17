@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 using Gladiateur.Armes;
 
@@ -14,7 +15,8 @@ namespace Gladiateur
 		private List<Arme> _listeArmeDefense1  = new List<Arme> ();
 		private List<Arme> _listeArmeAttaque2  = new List<Arme> ();
 		private List<Arme> _listeArmeDefense2  = new List<Arme> ();
-		private string _returnMagique;
+		private string _returnArmeAttDef;
+		private string _returnArmeIni;
 
 		//Constructeur
 		public Combat (Gladiateur gla1, Gladiateur gla2)
@@ -48,34 +50,76 @@ namespace Gladiateur
 				}
 			}
 
+			//Return gla1
 			//Return arme attaque
-			_returnMagique = "Les armes d\'attaques de " + _gla1.Nom + " sont \n";
+			_returnArmeAttDef = "Les armes d\'attaques de " + _gla1.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeAttaque1) {
-				_returnMagique += b_arme.Nom+"\n";
+				_returnArmeAttDef += b_arme.Nom+"\n";
 			}
 			//Return arme défense
-			_returnMagique += "Les armes de défense de " + _gla1.Nom + " sont \n";
+			_returnArmeAttDef += "Les armes de défense de " + _gla1.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeDefense1) {
-				_returnMagique += b_arme.Nom+"\n";
+				_returnArmeAttDef += b_arme.Nom+"\n";
 			}
 
+			//return gla2
 			//Return arme attaque
-			_returnMagique = "Les armes d\'attaques de " + _gla2.Nom + " sont \n";
+			_returnArmeAttDef = "Les armes d\'attaques de " + _gla2.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeAttaque2) {
-				_returnMagique += b_arme.Nom+"\n";
+				_returnArmeAttDef += b_arme.Nom+"\n";
 			}
 			//Return arme défense
-			_returnMagique += "Les armes de défense de " + _gla2.Nom + " sont \n";
+			_returnArmeAttDef += "Les armes de défense de " + _gla2.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeDefense2) {
-				_returnMagique += b_arme.Nom+"\n";
+				_returnArmeAttDef += b_arme.Nom+"\n";
 			}
 
 			//returnMagique
-			//return _returnMagique;
+			//return _returnArmeAttDef;
 
 
-		}
+			//Tri ArmeAttaque par initiative
+			_listeArmeAttaque1 = (from b_arme in _listeArmeAttaque1
+									orderby b_arme.Initiative
+			                      	select b_arme).ToList ();
 
+			_listeArmeAttaque2 = (from b_arme in _listeArmeAttaque2
+			                      orderby b_arme.Initiative
+			                      select b_arme).ToList ();
+
+			_returnArmeIni = "Arme ayant la meilleur initiative de gla1 : ";
+			_returnArmeIni += _listeArmeAttaque1 [0].Nom+"\n";
+			_returnArmeIni += "Arme ayant la meilleur initiative de gla2 : ";
+			_returnArmeIni += _listeArmeAttaque2 [0].Nom+"\n";
+			return _returnArmeIni;
+
+			//Qui a la meilleur initiative
+			if(_listeArmeAttaque1[0].Initiative > _listeArmeAttaque2[0].Initiative){
+				_listeArmeAttaque1[0].Attaquer();
+			}
+			else if (_listeArmeAttaque1[0].Initiative < _listeArmeAttaque2[0].Initiative){
+				_listeArmeAttaque2[0].Attaquer();
+			}
+			else if (_listeArmeAttaque1[0].Initiative == _listeArmeAttaque2[0].Initiative){
+				Random Random1 = new Random();
+				int    random1 = Random1.Next();
+
+				Random Random2 = new Random();
+				int    random2 = Random2.Next();
+
+				if (random1 == random2) {
+					while (random1 == random2) {
+						random1 = Random1.Next();
+						random2 = Random2.Next();
+					}
+				}
+				else if(random1>random2){
+					_listeArmeAttaque1[0].Attaquer();
+				}
+				else if (random2>random1){
+					_listeArmeAttaque2[0].Attaquer();
+				}
+			}
 
 
 
@@ -114,7 +158,7 @@ namespace Gladiateur
 			*/
 		
 
-
+		}
 	}
 }
 

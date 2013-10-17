@@ -11,7 +11,12 @@ namespace Gladiateur.Armes
 		}
 
 		//Méthode
-		public void Defendre()
+		public override void Attaquer()
+		{
+
+		}
+
+		public override void Defendre()
 		{
 
 		}
