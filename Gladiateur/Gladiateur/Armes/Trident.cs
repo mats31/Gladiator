@@ -11,7 +11,7 @@ namespace Gladiateur.Armes
 		}
 
 		//Méthode
-		public void Attaque()
+		public override bool Attaquer()
 		{
 			Random rand = new Random();
 			int randomNumber = rand.Next (0, 100);
@@ -25,8 +25,10 @@ namespace Gladiateur.Armes
 			{
 				return false;
 			}
+
+			return false;
 		}
-		public void Defendre()
+		public override bool Defendre()
 		{
 			Random rand = new Random();
 			int randomNumber = rand.Next (0, 100);
@@ -40,6 +42,8 @@ namespace Gladiateur.Armes
 			{
 				return false;
 			}
+
+			return false;
 		}
 	}
 }

@@ -4,7 +4,7 @@ namespace Gladiateur.Armes
 {
 	public interface IDefendre
 	{
-		void Defendre();
+		bool Defendre();
 	}
 }
 

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-
 using Gladiateur.Armes;
 
 namespace Gladiateur
@@ -71,17 +70,24 @@ namespace Gladiateur
 			}
 
 			//returnMagique
-			//return _returnMagique;
-
-
+			return _returnMagique;
 		}
 
+		public string Attaquer()
+		{
+			if (_listeArmeAttaque1[0].Attaquer() == true) 
+			{
+				if (_listeArmeDefense2[0].Defendre() == true)
+				{
 
+					return("Le gladiateur \"" + _gla2.Nom + "\" a bloqué l'attaque !");
+				}
 
+				return("Le gladiateur \"" + _gla1.Nom + "\" a touché son ennemi !");
+			}
 
-
-
-
+			return("Le gladiateur \"" + _gla1.Nom + "\" a manqué son attaque !");
+		}
 
 			/*	
 			if(arme1.initiative>arme2.initiative){
@@ -117,4 +123,3 @@ namespace Gladiateur
 
 	}
 }
-

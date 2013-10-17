@@ -2,7 +2,7 @@ using System;
 
 namespace Gladiateur.Armes
 {
-	public class Arme
+	public  abstract class Arme
 	{
 		//Constructeur
 		public Arme ()
@@ -55,6 +55,10 @@ namespace Gladiateur.Armes
 			get { return this._pc_touche; }
 			protected set { this._pc_touche = value; }
 		}
+
+		public abstract bool Attaquer ();
+		public abstract bool Defendre ();
+
 	}
 }
 
