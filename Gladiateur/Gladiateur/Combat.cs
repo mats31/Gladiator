@@ -129,30 +129,58 @@ namespace Gladiateur
 		{
 			while (_gla1.Vie == 1 || _gla1.Vie == 1) 
 			{
-				if (_listeArmeAttaque1[0].Attaquer() == true) 
+				// Passe d'arme du gladiateur ayant l'initiative
+
+				if (_listeArmeAttaque1 [0].Attaquer () == true) 
 				{
-					if (_listeArmeDefense2[0].Defendre() == true)
-					{
-
-						Console.WriteLine("Le gladiateur \"" + _gla2.Nom + "\" a bloqué l'attaque !");
-					}
-
 					_gla2.Vie = 0;
-					return("Le gladiateur \"" + _gla1.Nom + "\" a touché son ennemi ! Le gladiateur \"" + _gla2.Nom + "\" est vaincu !");
+					return("Le gladiateur \"" + _gla1.Nom + "\" a touché son ennemi avec son "+_listeArmeAttaque1 [0].Nom+" ! Le gladiateur \"" + _gla2.Nom + "\" est vaincu !");
+				}
+
+				if (_listeArmeAttaque1.Count >= 2 && _listeArmeAttaque1 [1].Attaquer () == true && _listeArmeAttaque1 [0].Attaquer () == false) 
+				{
+					_gla2.Vie = 0;
+					return("Le gladiateur \"" + _gla1.Nom + "\" a touché son ennemi avec son "+_listeArmeAttaque1 [1].Nom+" ! Le gladiateur \"" + _gla2.Nom + "\" est vaincu !");
+				}
+
+				if (_listeArmeDefense2[0].Defendre() == true)
+				{
+
+					Console.WriteLine("Le gladiateur \"" + _gla2.Nom + " a bloqué l'attaque du gladiateur "+_gla1.Nom+" avec son "+_listeArmeDefense2[0].Nom+" !");
+				}
+
+				if (_listeArmeDefense2.Count >= 2 && _listeArmeDefense2[1].Defendre() == true && _listeArmeDefense2[0].Defendre() == false)
+				{
+
+					Console.WriteLine("Le gladiateur \"" + _gla2.Nom + " a bloqué l'attaque du gladiateur "+_gla1.Nom+" avec son "+_listeArmeDefense2[1].Nom+" !");
 				}
 
 				Console.WriteLine("Le gladiateur \"" + _gla1.Nom + "\" a manqué son attaque !");
 
-				if (_listeArmeAttaque2[0].Attaquer() == true) 
+				// Passe d'arme du gladiateur n'ayant pas l'initiative
+
+				if (_listeArmeAttaque2 [0].Attaquer() == true) 
 				{
-					if (_listeArmeDefense1[0].Defendre() == true)
-					{
-
-						Console.WriteLine("Le gladiateur \"" + _gla1.Nom + "\" a bloqué l'attaque !");
-					}
-
 					_gla1.Vie = 0;
-					return("Le gladiateur \"" + _gla2.Nom + "\" a touché son ennemi ! Le gladiateur \"" + _gla1.Nom + "\" est vaincu !");
+					return("Le gladiateur \"" + _gla2.Nom + "\" a touché son ennemi avec son "+_listeArmeAttaque2[0].Nom+" ! Le gladiateur \"" + _gla1.Nom + "\" est vaincu !");
+				}
+
+				if (_listeArmeAttaque2.Count >= 2 && _listeArmeAttaque2 [1].Attaquer () == true && _listeArmeAttaque2 [0].Attaquer () == false) 
+				{
+					_gla2.Vie = 0;
+					return("Le gladiateur \"" + _gla2.Nom + "\" a touché son ennemi avec son "+_listeArmeAttaque2 [1].Nom+" ! Le gladiateur \"" + _gla1.Nom + "\" est vaincu !");
+				}
+
+				if (_listeArmeDefense1[0].Defendre() == true)
+				{
+
+					Console.WriteLine("Le gladiateur \"" + _gla1.Nom + " a bloqué l'attaque du gladiateur "+_gla2.Nom+" avec son "+_listeArmeDefense1[0].Nom+" !");
+				}
+
+				if (_listeArmeDefense1.Count >= 2 && _listeArmeDefense1[1].Defendre() == true && _listeArmeDefense1[0].Defendre() == false)
+				{
+
+					Console.WriteLine("Le gladiateur \"" + _gla1.Nom + " a bloqué l'attaque du gladiateur "+_gla2.Nom+" avec son "+_listeArmeDefense1[1].Nom+" !");
 				}
 
 				Console.WriteLine("Le gladiateur \"" + _gla2.Nom + "\" a manqué son attaque !");
