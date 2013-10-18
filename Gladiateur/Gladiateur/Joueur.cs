@@ -55,15 +55,16 @@ namespace Gladiateur
 			this.Alias  = alias;
 			this.Date   = _date;
 			this.ListeEquipe = new List<Equipe> ();
+			Console.WriteLine ("Le joueur \""+this._alias+"\" est maintenant connecté.");
 		}
 
 		//Méthodes
-		public string connexionJoueurs()
+/*		public string connexionJoueurs()
 		{
 			return("Le joueur \""+this._alias+"\" est maintenant connecté."); 
 		}
-
-		public string createEquipe()
+*/
+/*		public string createEquipe()
 		{
 			_returnCreation = "***** ***** *****\n";
 			_returnCreation += "CREATION\n";
@@ -73,11 +74,12 @@ namespace Gladiateur
 
 			return _returnCreation; 
 		}
-
+*/
 		public void setEquipe(Equipe e)
 		{
 			if (this.ListeEquipe.Count < 5) {
 				this.ListeEquipe.Add (e);
+				Console.WriteLine (this._alias + " a créé l'équipe " + this._listeEquipe [this._listeEquipe.Count - 1].Nom + ".");
 			} else {
 				Console.WriteLine ("Ce joueur possède déjà 5 équipes");
 			}

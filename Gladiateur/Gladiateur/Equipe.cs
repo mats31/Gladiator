@@ -83,7 +83,7 @@ namespace Gladiateur
         }
 
 		//Méthodes
-		public string creerGlad()
+/*		public string creerGlad()
 		{
 
 			foreach (Gladiateur b_gladiateur in ListeGladiateur)
@@ -93,6 +93,7 @@ namespace Gladiateur
 
 			return null;
 		}
+*/		
 		public string getListeJoueur()
 		{
 			foreach (var b_joueur in ListeGladiateur) {
@@ -110,6 +111,7 @@ namespace Gladiateur
 		{
 			if (this.ListeGladiateur.Count < 3) {
 				this.ListeGladiateur.Add (g);
+				Console.WriteLine(g.Nom+" rejoint l'équipe des "+this.Nom+".");
 			} else {
 				Console.WriteLine ("Cette équipe possède déjà 3 gladiateurs");
 			}

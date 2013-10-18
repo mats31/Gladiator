@@ -66,31 +66,31 @@ namespace Gladiateur
 
 			//gladiateur -> arme
 			//Bulls
-			l_rose.ListeArme.Add(l_epee);
-			l_rose.ListeArme.Add(l_filet);
-			l_rose.ListeArme.Add(l_casque);
+			l_rose.setArme(l_epee);
+			l_rose.setArme(l_filet);
+			l_rose.setArme(l_casque);
 
-			l_noah.ListeArme.Add(l_dague);
-			l_noah.ListeArme.Add(l_bouclier_rectangle);
+			l_noah.setArme(l_dague);
+			l_noah.setArme(l_bouclier_rectangle);
 
-			l_deng.ListeArme.Add(l_lance);
-			l_deng.ListeArme.Add(l_casque);
+			l_deng.setArme(l_lance);
+			l_deng.setArme(l_casque);
 
 			//Celtics
-			l_rondo.ListeArme.Add(l_trident);
-			l_rondo.ListeArme.Add(l_casque);
+			l_rondo.setArme(l_trident);
+			l_rondo.setArme(l_casque);
 
-			l_pierce.ListeArme.Add(l_filet);
-			l_pierce.ListeArme.Add(l_dague);
-			l_pierce.ListeArme.Add(l_casque);
+			l_pierce.setArme(l_filet);
+			l_pierce.setArme(l_dague);
+			l_pierce.setArme(l_casque);
 
-			l_green.ListeArme.Add(l_dague);
-			l_green.ListeArme.Add(l_dague);
-			l_green.ListeArme.Add(l_bouclier_rond);
+			l_green.setArme(l_dague);
+			l_green.setArme(l_dague);
+			l_green.setArme(l_bouclier_rond);
 
 
 		//Return - Création
-			Console.WriteLine(l_j1.connexionJoueurs());
+/*			Console.WriteLine(l_j1.connexionJoueurs());
 			Console.WriteLine(l_j2.connexionJoueurs());
 			Console.WriteLine ("\n");
 			Console.WriteLine(l_j1.createEquipe());
@@ -110,7 +110,7 @@ namespace Gladiateur
 			l_pierce.equipeGlad ();
 			Console.WriteLine ("\n");
 			l_green.equipeGlad ();
-
+*/
 		//Return Recap
 			Console.WriteLine ("\n\n***** ***** ***** ***** ***** *****\nRECAP\n***** ***** ***** ***** ***** *****");
 			Console.WriteLine ("J1 : "+l_j1.Alias+"\tJ2 : "+l_j2.Alias);

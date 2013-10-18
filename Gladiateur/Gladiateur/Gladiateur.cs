@@ -71,7 +71,7 @@ namespace Gladiateur
         }
 
 		//Méthode
-		public string equipeGlad()
+/*		public string equipeGlad()
 		{
 
 			foreach (Arme b_arme in ListeArme)
@@ -81,13 +81,14 @@ namespace Gladiateur
 
 			return null;
 		}
-
+*/
 		public void setArme(Arme a)
 		{
 			this.PointArme += a.Points;
 
 			if (this.PointArme <= 10) {
 				this.ListeArme.Add (a);
+				Console.WriteLine("Le gladiateur "+this.Nom+" s'équipe avec : "+a.Nom+".");
 			} else {
 				Console.WriteLine ("Ce gladiateur possède déjà "+PointArme+" points d'armes");
 			}
