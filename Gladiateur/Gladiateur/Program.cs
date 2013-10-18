@@ -130,6 +130,11 @@ namespace Gladiateur
 			classement.triListeEquipe ();
 			Console.WriteLine (classement.getClassement());
 
+			ClassementPourJoueur classementJ1 = new ClassementPourJoueur (l_j2);
+			classementJ1.recupListeEquipe ();
+			//classementJ1.triListeEquipe ();
+			Console.WriteLine (classementJ1.getClassement());
+
 		//Combat
 			Combat l_bataille1 = new Combat (l_rose,l_rondo);
 			Console.WriteLine(l_bataille1.triArmeAttDef());

@@ -7,24 +7,30 @@ namespace Gladiateur
 	class Classement
 	{
 		//Attributs
-		protected int i=1;
-		protected string _classement;
+		private int i=1;
+		private string _classement;
 		private List<Equipe> _equipeListe = new List<Equipe> ();
-		protected Joueur _j1, _j2;
+		private Joueur _j1, _j2;
+
+		//Constructeur
+		public Classement ()
+		{
+		}
 
 		public Classement (Joueur j1, Joueur j2)
 		{
-			this._j1 = j1;
-			this._j2 = j2;
+			_j1 = j1;
+			_j2 = j2;
 		}
 
-		public void recupListeEquipe()
+		//Méthode
+		public virtual void recupListeEquipe()
 		{
 			foreach (var b_equipe in _j1.ListeEquipe) {
-				this._equipeListe.Add(b_equipe);
+				_equipeListe.Add(b_equipe);
 			}
 			foreach (var b_equipe in _j2.ListeEquipe) {
-				this._equipeListe.Add(b_equipe);
+				_equipeListe.Add(b_equipe);
 			}
 		}
 
@@ -37,22 +43,23 @@ namespace Gladiateur
 
 		public string getClassement()
 		{
-			this._classement += "***** *****\n";
-			this._classement += "Classement\n";
-			this._classement += "***** *****\n";
-			foreach (var b_equipe in this._equipeListe) {
-				this._classement += this.i;
-				this._classement += " ";
-				this._classement += b_equipe.Nom;
-				this._classement += " ";
-				this._classement += b_equipe.pcVictoire;
-				this._classement += "\n";
+			_classement += "***** *****\n";
+			_classement += "Classement\n";
+			_classement += "***** *****\n";
+			foreach (var b_equipe in _equipeListe) {
+				_classement += i;
+				_classement += " ";
+				_classement += b_equipe.Nom;
+				_classement += " ";
+				_classement += b_equipe.pcVictoire;
+				_classement += "\n";
 				i++;
 			}
-			this._classement += "***** *****\n";
+			_classement += "***** *****\n";
 			i = 1;
 			return _classement;
 		}
+
 	}
 }
 
