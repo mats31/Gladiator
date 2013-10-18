@@ -92,11 +92,11 @@ namespace Gladiateur
 		public string quiCommence()
 		{	
 			//Qui a la meilleur initiative
-			if(_listeArmeAttaque1[0].Initiative > _listeArmeAttaque2[0].Initiative){
+			if(_listeArmeAttaque1[0].Initiative < _listeArmeAttaque2[0].Initiative){
 				_listeArmeAttaque1[0].Attaquer();
 				return _gla1.Nom + " attaque en premier avec " + _listeArmeAttaque1 [0].Nom;
 			}
-			else if (_listeArmeAttaque1[0].Initiative < _listeArmeAttaque2[0].Initiative){
+			else if (_listeArmeAttaque1[0].Initiative > _listeArmeAttaque2[0].Initiative){
 				_listeArmeAttaque2[0].Attaquer();
 				return _gla2.Nom + " attaque en premier avec " + _listeArmeAttaque2 [0].Nom;
 			}
@@ -113,7 +113,7 @@ namespace Gladiateur
 						random2 = Random2.Next();
 					}
 				}
-				else if(random1>random2){
+				else if(random1<random2){
 					_listeArmeAttaque1[0].Attaquer();
 					return _gla1.Nom + " attaque en premier avec " + _listeArmeAttaque1 [0].Nom;
 				}
