@@ -119,7 +119,7 @@ namespace Gladiateur
 					_listeArmeAttaque2[0].Attaquer();
 				}
 			}
-			return _returnMagique;
+			//return _returnMagique;
 		}
 
 		public string Attaquer()
@@ -169,6 +169,6 @@ namespace Gladiateur
 			*/
 		
 
-		}
+
 	}
 }
