@@ -25,11 +25,9 @@ namespace Gladiateur
 		}
 
 		//Méthode
-		public string quiCommence()
-		{	
-			//this._gla1.ListeArme[0]
-
-			//Récupère arme gla1
+		public string triArmeAttDef()
+		{
+			//Gla1 - Récupère Arme + Tri ArmeAtt / ArmeDef
 			foreach (Arme b_arme in this._gla1.ListeArme) {
 				if (b_arme.Attaque == true) {
 					_listeArmeAttaque1.Add (b_arme);
@@ -39,7 +37,7 @@ namespace Gladiateur
 				}
 			}
 
-			//Récupère arme gla2
+			//Gla2 - Récupère Arme + Tri ArmeAtt / ArmeDef
 			foreach (Arme b_arme in this._gla2.ListeArme) {
 				if (b_arme.Attaque == true) {
 					_listeArmeAttaque2.Add (b_arme);
@@ -53,51 +51,54 @@ namespace Gladiateur
 			//Return arme attaque
 			_returnArmeAttDef = "Les armes d\'attaques de " + _gla1.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeAttaque1) {
-				_returnArmeAttDef += b_arme.Nom+"\n";
+				_returnArmeAttDef += "\t- "+b_arme.Nom+"\n";
 			}
 			//Return arme défense
 			_returnArmeAttDef += "Les armes de défense de " + _gla1.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeDefense1) {
-				_returnArmeAttDef += b_arme.Nom+"\n";
+				_returnArmeAttDef += "\t- "+b_arme.Nom+"\n";
 			}
 
 			//return gla2
 			//Return arme attaque
-			_returnArmeAttDef = "Les armes d\'attaques de " + _gla2.Nom + " sont \n";
+			_returnArmeAttDef += "Les armes d\'attaques de " + _gla2.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeAttaque2) {
-				_returnArmeAttDef += b_arme.Nom+"\n";
+				_returnArmeAttDef += "\t- "+b_arme.Nom+"\n";
 			}
 			//Return arme défense
 			_returnArmeAttDef += "Les armes de défense de " + _gla2.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeDefense2) {
-				_returnArmeAttDef += b_arme.Nom+"\n";
+				_returnArmeAttDef += "\t- "+b_arme.Nom+"\n";
 			}
-
-			//returnMagique
-			//return _returnArmeAttDef;
 
 
 			//Tri ArmeAttaque par initiative
 			_listeArmeAttaque1 = (from b_arme in _listeArmeAttaque1
-									orderby b_arme.Initiative
-			                      	select b_arme).ToList ();
+			                      orderby b_arme.Initiative
+			                      select b_arme).ToList ();
 
 			_listeArmeAttaque2 = (from b_arme in _listeArmeAttaque2
 			                      orderby b_arme.Initiative
 			                      select b_arme).ToList ();
 
-			_returnArmeIni = "Arme ayant la meilleur initiative de gla1 : ";
-			_returnArmeIni += _listeArmeAttaque1 [0].Nom+"\n";
-			_returnArmeIni += "Arme ayant la meilleur initiative de gla2 : ";
-			_returnArmeIni += _listeArmeAttaque2 [0].Nom+"\n";
-			return _returnArmeIni;
+			_returnArmeAttDef += "Arme ayant la meilleur initiative de gla1 : ";
+			_returnArmeAttDef += _listeArmeAttaque1 [0].Nom+"\n";
+			_returnArmeAttDef += "Arme ayant la meilleur initiative de gla2 : ";
+			_returnArmeAttDef += _listeArmeAttaque2 [0].Nom+"\n";
 
+			return _returnArmeAttDef;
+		}
+
+		public string quiCommence()
+		{	
 			//Qui a la meilleur initiative
 			if(_listeArmeAttaque1[0].Initiative > _listeArmeAttaque2[0].Initiative){
 				_listeArmeAttaque1[0].Attaquer();
+				return _gla1.Nom + " attaque en premier avec " + _listeArmeAttaque1 [0].Nom;
 			}
 			else if (_listeArmeAttaque1[0].Initiative < _listeArmeAttaque2[0].Initiative){
 				_listeArmeAttaque2[0].Attaquer();
+				return _gla2.Nom + " attaque en premier avec " + _listeArmeAttaque2 [0].Nom;
 			}
 			else if (_listeArmeAttaque1[0].Initiative == _listeArmeAttaque2[0].Initiative){
 				Random Random1 = new Random();
@@ -114,15 +115,15 @@ namespace Gladiateur
 				}
 				else if(random1>random2){
 					_listeArmeAttaque1[0].Attaquer();
+					return _gla1.Nom + " attaque en premier avec " + _listeArmeAttaque1 [0].Nom;
 				}
 				else if (random2>random1){
 					_listeArmeAttaque2[0].Attaquer();
+					return _gla2.Nom + " attaque en premier avec " + _listeArmeAttaque2 [0].Nom;
 				}
 			}
 
-			//return _returnMagique;
-			return _returnArmeIni;
-
+			return null;
 		}
 
 		public string Attaquer()

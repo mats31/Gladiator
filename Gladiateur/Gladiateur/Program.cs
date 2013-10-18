@@ -89,7 +89,7 @@ namespace Gladiateur
 			l_green.ListeArme.Add(l_bouclier_rond);
 
 
-			//Return - Création
+		//Return - Création
 			Console.WriteLine(l_j1.connexionJoueurs());
 			Console.WriteLine(l_j2.connexionJoueurs());
 			Console.WriteLine ("\n");
@@ -111,10 +111,28 @@ namespace Gladiateur
 			Console.WriteLine ("\n");
 			l_green.equipeGlad ();
 
+		//Return Recap
+			Console.WriteLine ("\n\n***** ***** ***** ***** ***** *****\nRECAP\n***** ***** ***** ***** ***** *****");
+			Console.WriteLine ("J1 : "+l_j1.Alias+"\tJ2 : "+l_j2.Alias);
+			Console.WriteLine ("***** ***** ***** ***** ***** *****");
+			Console.WriteLine ("Equipes "+l_j1.Alias+" : "+l_j1.getListeEquipe());
+			Console.WriteLine ("Equipes "+l_j2.Alias+" : "+l_j2.getListeEquipe());
+			Console.WriteLine ("***** ***** ***** ***** ***** *****");
+			Console.WriteLine (l_j1.Alias+" - "+ l_j1.ListeEquipe [0].Nom + " : " + l_j1.ListeEquipe [0].getListeJoueur ());
+			Console.WriteLine (l_j2.Alias+" - "+ l_j2.ListeEquipe [0].Nom + " : " + l_j2.ListeEquipe [0].getListeJoueur ());
+			Console.WriteLine ("***** ***** ***** ***** ***** *****\n\n");
+
+		//Classement
+			Classement classement = new Classement (l_j1,l_j2);
+			l_bulls.setPcVictoire(50);
+			l_celtics.setPcVictoire(60);
+			classement.recupListeEquipe ();
+			classement.triListeEquipe ();
+			Console.WriteLine (classement.getClassement());
 
 		//Combat
 			Combat l_bataille1 = new Combat (l_rose,l_rondo);
-			//Console.WriteLine(l_bataille1.triArmeAttDef());
+			Console.WriteLine(l_bataille1.triArmeAttDef());
 			Console.WriteLine(l_bataille1.quiCommence());
 			Console.WriteLine(l_bataille1.Attaquer());
 

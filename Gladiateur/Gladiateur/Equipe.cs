@@ -10,6 +10,8 @@ namespace Gladiateur
     class Equipe
     {
 		//Attributs
+		private string afficheListeGladiateur;
+
 		private Joueur _joueur;
 		public Joueur Joueur
 		{
@@ -90,6 +92,18 @@ namespace Gladiateur
 			}
 
 			return null;
+		}
+		public string getListeJoueur()
+		{
+			foreach (var b_joueur in ListeGladiateur) {
+				afficheListeGladiateur += b_joueur.Nom+" ";
+			}
+			return afficheListeGladiateur;
+		}
+
+		public void setPcVictoire(int pc)
+		{
+			this.pcVictoire = pc;
 		}
 		/*
 		//Méthode
