@@ -4,6 +4,7 @@ namespace Gladiateur.Armes
 {
 	public abstract class Arme
 	{
+		//Constructeur
 		public Arme ()
 		{
 		}
