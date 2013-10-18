@@ -110,7 +110,12 @@ namespace Gladiateur
 			Console.WriteLine ("\n");
 			l_green.equipeGlad ();
 
-
+			//Return Recap
+			Console.WriteLine ("\n***** ***** ***** ***** *****\nRECAP\n***** ***** ***** ***** *****");
+			Console.WriteLine ("J1 : "+l_j1.Alias+"\tJ2 : "+l_j2.Alias);
+			Console.WriteLine ("***** ***** ***** ***** *****");
+			Console.WriteLine ("Equipes "+l_j1.Alias+" : ");
+			Console.WriteLine ("");
 		//Combat
 			Combat l_bataille1 = new Combat (l_rose,l_rondo);
 			Console.WriteLine(l_bataille1.triArmeAttDef());
