@@ -47,6 +47,17 @@ namespace Gladiateur
 			}
 		}
 
+
+		private Equipe _equipeFight;
+		public Equipe EquipeFight {
+			get {
+				return _equipeFight;
+			}
+			private set {
+				_equipeFight = value;
+			}
+		}
+
 		//Constructeur
 		public Joueur(string nom, string prenom, string alias)
 		{
@@ -75,16 +86,7 @@ namespace Gladiateur
 			return _returnCreation; 
 		}
 */
-		public void setEquipe(Equipe e)
-		{
-			if (this.ListeEquipe.Count < 5) {
-				this.ListeEquipe.Add (e);
-				Console.WriteLine (this._alias + " a créé l'équipe " + this._listeEquipe [this._listeEquipe.Count - 1].Nom + ".");
-			} else {
-				Console.WriteLine ("Ce joueur possède déjà 5 équipes");
-			}
-		}
-
+		//Getters
 		public Equipe getEquipe(int i)
 		{
 			return this.ListeEquipe[i];
@@ -96,6 +98,23 @@ namespace Gladiateur
 				afficheListeEquipe += b_equipe.Nom+" ";
 			}
 			return afficheListeEquipe;
+		}
+
+		//Setters
+		public void setEquipe(Equipe e)
+		{
+			if (this.ListeEquipe.Count < 5) {
+				this.ListeEquipe.Add (e);
+				Console.WriteLine (this._alias + " a créé l'équipe " + this._listeEquipe [this._listeEquipe.Count - 1].Nom + ".");
+			} else {
+				Console.WriteLine ("Ce joueur possède déjà 5 équipes");
+			}
+		}
+
+		public void choixEquipe(Equipe e)
+		{
+			this._equipeFight = e;
+			Console.WriteLine (this._alias+" choisit l\'équipe "+e.Nom+" pour se battre");
 		}
 
     }

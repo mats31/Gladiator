@@ -111,7 +111,7 @@ namespace Gladiateur
 			Console.WriteLine ("\n");
 			l_green.equipeGlad ();
 */
-		//Return Recap
+		//Recap
 			Console.WriteLine ("\n\n***** ***** ***** ***** ***** *****\nRECAP\n***** ***** ***** ***** ***** *****");
 			Console.WriteLine ("J1 : "+l_j1.Alias+"\tJ2 : "+l_j2.Alias);
 			Console.WriteLine ("***** ***** ***** ***** ***** *****");
@@ -121,14 +121,23 @@ namespace Gladiateur
 			Console.WriteLine (l_j1.Alias+" - "+ l_j1.getEquipe(0).Nom + " : " + l_j1.getEquipe(0).getListeJoueur ());
 			Console.WriteLine (l_j2.Alias+" - "+ l_j2.getEquipe(0).Nom + " : " + l_j2.getEquipe(0).getListeJoueur ());
 			Console.WriteLine ("***** ***** ***** ***** ***** *****\n\n");
+		
+		//Choix
+			l_j1.choixEquipe (l_bulls);
+			l_j2.choixEquipe (l_celtics);
+
 
 		//Classement
 			Classement classement = new Classement (l_j1,l_j2);
+
+
 			l_bulls.setPcVictoire(50);
 			l_celtics.setPcVictoire(60);
-			classement.recupListeEquipe ();
+			classement.recupEquipeFight ();
 			classement.triListeEquipe ();
 			Console.WriteLine (classement.getClassement());
+
+		
 
 		//Combat
 			Combat l_bataille1 = new Combat (l_rose,l_rondo);

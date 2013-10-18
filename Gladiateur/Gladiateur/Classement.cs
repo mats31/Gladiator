@@ -24,14 +24,14 @@ namespace Gladiateur
 		}
 
 		//Méthode
-		public virtual void recupListeEquipe()
+		public void recupEquipeFight()
 		{
-			foreach (var b_equipe in _j1.ListeEquipe) {
-				_equipeListe.Add(b_equipe);
+			foreach (var item in _equipeListe) {
+	
 			}
-			foreach (var b_equipe in _j2.ListeEquipe) {
-				_equipeListe.Add(b_equipe);
-			}
+
+			_equipeListe.Add(_j1.EquipeFight);
+			_equipeListe.Add(_j2.EquipeFight);
 		}
 
 		public void triListeEquipe()
@@ -43,7 +43,7 @@ namespace Gladiateur
 
 		public string getClassement()
 		{
-			_classement += "***** ***** *****\n";
+			_classement += "\n\n***** ***** *****\n";
 			_classement += "CLASSEMENT\n";
 			_classement += "***** ***** *****\n";
 			foreach (var b_equipe in _equipeListe) {
@@ -59,7 +59,6 @@ namespace Gladiateur
 			i = 1;
 			return _classement;
 		}
-
 	}
 }
 
