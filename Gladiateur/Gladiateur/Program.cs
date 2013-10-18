@@ -67,7 +67,8 @@ namespace Gladiateur
 			//gladiateur -> arme
 			//Bulls
 			l_rose.ListeArme.Add(l_epee);
-			l_rose.ListeArme.Add(l_bouclier_rond);
+			l_rose.ListeArme.Add(l_filet);
+			l_rose.ListeArme.Add(l_casque);
 
 			l_noah.ListeArme.Add(l_dague);
 			l_noah.ListeArme.Add(l_bouclier_rectangle);
@@ -113,7 +114,7 @@ namespace Gladiateur
 
 		//Combat
 			Combat l_bataille1 = new Combat (l_rose,l_rondo);
-			Console.WriteLine(l_bataille1.triArmeAttDef());
+			//Console.WriteLine(l_bataille1.triArmeAttDef());
 			Console.WriteLine(l_bataille1.quiCommence());
 			Console.WriteLine(l_bataille1.Attaquer());
 
