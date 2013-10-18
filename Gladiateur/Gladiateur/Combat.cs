@@ -123,6 +123,7 @@ namespace Gladiateur
 					return _gla2.Nom+" attaque en premier avec "+_listeArmeAttaque2[0].Nom;
 				}
 			}
+			return null;
 		}
 
 		public string Attaquer()
