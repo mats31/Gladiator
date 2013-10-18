@@ -139,6 +139,20 @@ namespace Gladiateur
 				}
 
 				Console.WriteLine("Le gladiateur \"" + _gla1.Nom + "\" a manqué son attaque !");
+
+				if (_listeArmeAttaque2[0].Attaquer() == true) 
+				{
+					if (_listeArmeDefense1[0].Defendre() == true)
+					{
+
+						Console.WriteLine("Le gladiateur \"" + _gla1.Nom + "\" a bloqué l'attaque !");
+					}
+
+					_gla1.Vie = 0;
+					return("Le gladiateur \"" + _gla2.Nom + "\" a touché son ennemi ! Le gladiateur \"" + _gla1.Nom + "\" est vaincu !");
+				}
+
+				Console.WriteLine("Le gladiateur \"" + _gla2.Nom + "\" a manqué son attaque !");
 			}
 
 			return("Erreur de jeu");
