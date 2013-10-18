@@ -51,24 +51,24 @@ namespace Gladiateur
 			//Return arme attaque
 			_returnArmeAttDef = "Les armes d\'attaques de " + _gla1.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeAttaque1) {
-				_returnArmeAttDef += b_arme.Nom+"\n";
+				_returnArmeAttDef += "\t- "+b_arme.Nom+"\n";
 			}
 			//Return arme défense
 			_returnArmeAttDef += "Les armes de défense de " + _gla1.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeDefense1) {
-				_returnArmeAttDef += b_arme.Nom+"\n";
+				_returnArmeAttDef += "\t- "+b_arme.Nom+"\n";
 			}
 
 			//return gla2
 			//Return arme attaque
 			_returnArmeAttDef += "Les armes d\'attaques de " + _gla2.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeAttaque2) {
-				_returnArmeAttDef += b_arme.Nom+"\n";
+				_returnArmeAttDef += "\t- "+b_arme.Nom+"\n";
 			}
 			//Return arme défense
 			_returnArmeAttDef += "Les armes de défense de " + _gla2.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeDefense2) {
-				_returnArmeAttDef += b_arme.Nom+"\n";
+				_returnArmeAttDef += "\t- "+b_arme.Nom+"\n";
 			}
 
 
