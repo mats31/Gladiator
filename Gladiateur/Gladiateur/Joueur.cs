@@ -10,6 +10,7 @@ namespace Gladiateur
     {
 		//Attributs
 		private string afficheListeEquipe;
+		private string _returnCreation;
 
 		//Getters-Setters
 		private string _nom;
@@ -41,7 +42,7 @@ namespace Gladiateur
 			get {
 				return _listeEquipe;
 			}
-			set {
+			private set {
 				_listeEquipe = value;
 			}
 		}
@@ -64,9 +65,27 @@ namespace Gladiateur
 
 		public string createEquipe()
 		{
-
+			_returnCreation = "***** ***** *****\n";
+			_returnCreation += "CREATION\n";
+			_returnCreation += "***** ***** *****\n";
 			//Permet d'obtenir la dernière équipe créé.
-			return(this._alias+" a créé l'équipe \""+this._listeEquipe[this._listeEquipe.Count-1].Nom+"\"."); 
+			_returnCreation += this._alias + " a créé l'équipe " + this._listeEquipe [this._listeEquipe.Count - 1].Nom + ".";
+
+			return _returnCreation; 
+		}
+
+		public void setEquipe(Equipe e)
+		{
+			if (this.ListeEquipe.Count < 5) {
+				this.ListeEquipe.Add (e);
+			} else {
+				Console.WriteLine ("Ce joueur possède déjà 5 équipes");
+			}
+		}
+
+		public Equipe getEquipe(int i)
+		{
+			return this.ListeEquipe[i];
 		}
 
 		public string getListeEquipe()
@@ -76,5 +95,6 @@ namespace Gladiateur
 			}
 			return afficheListeEquipe;
 		}
+
     }
 }

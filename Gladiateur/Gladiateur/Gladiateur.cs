@@ -10,7 +10,6 @@ namespace Gladiateur
     public class Gladiateur
     {
 		//Attributs
-
 		private string _nom;
 		public string Nom
 		{
@@ -51,7 +50,7 @@ namespace Gladiateur
 			get {
 				return _listeArme;
 			}
-			set {
+			private set {
 				_listeArme = value;
 			}
 		}
@@ -71,6 +70,7 @@ namespace Gladiateur
 			this.Vie = 1;
         }
 
+		//Méthode
 		public string equipeGlad()
 		{
 
@@ -81,6 +81,19 @@ namespace Gladiateur
 
 			return null;
 		}
+
+		public void setArme(Arme a)
+		{
+			this.PointArme += a.Points;
+
+			if (this.PointArme <= 10) {
+				this.ListeArme.Add (a);
+			} else {
+				Console.WriteLine ("Ce gladiateur possède déjà "+PointArme+" points d'armes");
+			}
+		}
+
+
 		/*
         public int gagne()
         {

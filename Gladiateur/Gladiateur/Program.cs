@@ -50,18 +50,18 @@ namespace Gladiateur
 
 		//Liste
 			//joueur -> equipe
-			l_j1.ListeEquipe.Add(l_bulls);
-			l_j2.ListeEquipe.Add(l_celtics);
+			l_j1.setEquipe(l_bulls);
+			l_j2.setEquipe(l_celtics);
 
 
 			//equipe -> gladiateur
-			l_bulls.ListeGladiateur.Add(l_rose);
-			l_bulls.ListeGladiateur.Add(l_noah);
-			l_bulls.ListeGladiateur.Add(l_deng);
+			l_bulls.setGladiateur(l_rose);
+			l_bulls.setGladiateur(l_noah);
+			l_bulls.setGladiateur(l_deng);
 
-			l_celtics.ListeGladiateur.Add(l_rondo);
-			l_celtics.ListeGladiateur.Add(l_pierce);
-			l_celtics.ListeGladiateur.Add(l_green);	
+			l_celtics.setGladiateur(l_rondo);
+			l_celtics.setGladiateur(l_pierce);
+			l_celtics.setGladiateur(l_green);	
 
 
 			//gladiateur -> arme
@@ -118,8 +118,8 @@ namespace Gladiateur
 			Console.WriteLine ("Equipes "+l_j1.Alias+" : "+l_j1.getListeEquipe());
 			Console.WriteLine ("Equipes "+l_j2.Alias+" : "+l_j2.getListeEquipe());
 			Console.WriteLine ("***** ***** ***** ***** ***** *****");
-			Console.WriteLine (l_j1.Alias+" - "+ l_j1.ListeEquipe [0].Nom + " : " + l_j1.ListeEquipe [0].getListeJoueur ());
-			Console.WriteLine (l_j2.Alias+" - "+ l_j2.ListeEquipe [0].Nom + " : " + l_j2.ListeEquipe [0].getListeJoueur ());
+			Console.WriteLine (l_j1.Alias+" - "+ l_j1.getEquipe(0).Nom + " : " + l_j1.getEquipe(0).getListeJoueur ());
+			Console.WriteLine (l_j2.Alias+" - "+ l_j2.getEquipe(0).Nom + " : " + l_j2.getEquipe(0).getListeJoueur ());
 			Console.WriteLine ("***** ***** ***** ***** ***** *****\n\n");
 
 		//Classement
@@ -129,11 +129,6 @@ namespace Gladiateur
 			classement.recupListeEquipe ();
 			classement.triListeEquipe ();
 			Console.WriteLine (classement.getClassement());
-
-			ClassementPourJoueur classementJ1 = new ClassementPourJoueur (l_j2);
-			classementJ1.recupListeEquipe ();
-			//classementJ1.triListeEquipe ();
-			Console.WriteLine (classementJ1.getClassement());
 
 		//Combat
 			Combat l_bataille1 = new Combat (l_rose,l_rondo);

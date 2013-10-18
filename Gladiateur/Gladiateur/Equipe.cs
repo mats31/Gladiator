@@ -70,7 +70,7 @@ namespace Gladiateur
 			get {
 				return _listeGladiateur;
 			}
-			set {
+			private set {
 				_listeGladiateur = value;
 			}
 		}
@@ -104,6 +104,15 @@ namespace Gladiateur
 		public void setPcVictoire(int pc)
 		{
 			this.pcVictoire = pc;
+		}
+
+		public void setGladiateur(Gladiateur g)
+		{
+			if (this.ListeGladiateur.Count < 3) {
+				this.ListeGladiateur.Add (g);
+			} else {
+				Console.WriteLine ("Cette équipe possède déjà 3 gladiateurs");
+			}
 		}
 		/*
 		//Méthode

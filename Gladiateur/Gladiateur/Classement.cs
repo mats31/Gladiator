@@ -43,9 +43,9 @@ namespace Gladiateur
 
 		public string getClassement()
 		{
-			_classement += "***** *****\n";
-			_classement += "Classement\n";
-			_classement += "***** *****\n";
+			_classement += "***** ***** *****\n";
+			_classement += "CLASSEMENT\n";
+			_classement += "***** ***** *****\n";
 			foreach (var b_equipe in _equipeListe) {
 				_classement += i;
 				_classement += " ";
@@ -55,7 +55,7 @@ namespace Gladiateur
 				_classement += "\n";
 				i++;
 			}
-			_classement += "***** *****\n";
+			_classement += "***** ***** *****\n";
 			i = 1;
 			return _classement;
 		}
