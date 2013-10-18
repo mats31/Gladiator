@@ -61,6 +61,7 @@
     <Compile Include="Armes\Interface\IAttaquer.cs" />
     <Compile Include="Armes\Interface\IDefendre.cs" />
     <Compile Include="Combat.cs" />
+    <Compile Include="Classement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

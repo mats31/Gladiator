@@ -8,6 +8,9 @@ namespace Gladiateur
 {
     class Joueur
     {
+		//Attributs
+		private string afficheListeEquipe;
+
 		//Getters-Setters
 		private string _nom;
 		public string Nom
@@ -64,6 +67,14 @@ namespace Gladiateur
 
 			//Permet d'obtenir la dernière équipe créé.
 			return(this._alias+" a créé l'équipe \""+this._listeEquipe[this._listeEquipe.Count-1].Nom+"\"."); 
+		}
+
+		public string getListeEquipe()
+		{
+			foreach (var b_equipe in ListeEquipe) {
+				afficheListeEquipe += b_equipe.Nom+" ";
+			}
+			return afficheListeEquipe;
 		}
     }
 }
