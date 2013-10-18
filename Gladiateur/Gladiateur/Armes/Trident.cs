@@ -15,7 +15,7 @@ namespace Gladiateur.Armes
 		{
 			Random rand = new Random();
 			int randomNumber = rand.Next (0, 100);
-
+			Console.WriteLine (randomNumber);
 			if (Pc_touche >= randomNumber) 
 			{
 				return true;
@@ -32,7 +32,7 @@ namespace Gladiateur.Armes
 		{
 			Random rand = new Random();
 			int randomNumber = rand.Next (0, 100);
-
+			Console.WriteLine (randomNumber);
 			if (Pc_touche >= randomNumber) 
 			{
 				return true;

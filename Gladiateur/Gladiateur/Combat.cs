@@ -27,7 +27,7 @@ namespace Gladiateur
 		//Méthode
 		public string triArmeAttDef()
 		{
-			//gla1 - récupère Arme + tri Arme attaque/Arme defense
+			//Gla1 - Récupère Arme + Tri ArmeAtt / ArmeDef
 			foreach (Arme b_arme in this._gla1.ListeArme) {
 				if (b_arme.Attaque == true) {
 					_listeArmeAttaque1.Add (b_arme);
@@ -37,7 +37,7 @@ namespace Gladiateur
 				}
 			}
 
-			//gla2 - récupère Arme + tri Arme attaque/Arme defense
+			//Gla2 - Récupère Arme + Tri ArmeAtt / ArmeDef
 			foreach (Arme b_arme in this._gla2.ListeArme) {
 				if (b_arme.Attaque == true) {
 					_listeArmeAttaque2.Add (b_arme);
@@ -49,27 +49,28 @@ namespace Gladiateur
 
 			//Return gla1
 			//Return arme attaque
-			_returnArmeAttDef = "\nLes armes d\'attaques de " + _gla1.Nom + " sont \n";
+			_returnArmeAttDef = "Les armes d\'attaques de " + _gla1.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeAttaque1) {
-				_returnArmeAttDef += "\t- "+b_arme.Nom+"\n";
+				_returnArmeAttDef += b_arme.Nom+"\n";
 			}
 			//Return arme défense
 			_returnArmeAttDef += "Les armes de défense de " + _gla1.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeDefense1) {
-				_returnArmeAttDef += "\t- "+b_arme.Nom+"\n";
+				_returnArmeAttDef += b_arme.Nom+"\n";
 			}
 
 			//return gla2
 			//Return arme attaque
-			_returnArmeAttDef += "\nLes armes d\'attaques de " + _gla2.Nom + " sont :\n \t- ";
+			_returnArmeAttDef += "Les armes d\'attaques de " + _gla2.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeAttaque2) {
 				_returnArmeAttDef += b_arme.Nom+"\n";
 			}
 			//Return arme défense
-			_returnArmeAttDef += "Les armes de défense de " + _gla2.Nom + " sont :\n";
+			_returnArmeAttDef += "Les armes de défense de " + _gla2.Nom + " sont \n";
 			foreach (Arme b_arme in this._listeArmeDefense2) {
-				_returnArmeAttDef += "\t- "+b_arme.Nom+"\n";
+				_returnArmeAttDef += b_arme.Nom+"\n";
 			}
+
 
 			//Tri ArmeAttaque par initiative
 			_listeArmeAttaque1 = (from b_arme in _listeArmeAttaque1
@@ -80,26 +81,24 @@ namespace Gladiateur
 			                      orderby b_arme.Initiative
 			                      select b_arme).ToList ();
 
-
-			_returnArmeAttDef += "\nArme ayant la meilleur initiative de "+_gla1.Nom+" : ";
+			_returnArmeAttDef += "Arme ayant la meilleur initiative de gla1 : ";
 			_returnArmeAttDef += _listeArmeAttaque1 [0].Nom+"\n";
-			_returnArmeAttDef += "Arme ayant la meilleur initiative de "+_gla2.Nom+" : ";
+			_returnArmeAttDef += "Arme ayant la meilleur initiative de gla2 : ";
 			_returnArmeAttDef += _listeArmeAttaque2 [0].Nom+"\n";
 
 			return _returnArmeAttDef;
 		}
-
 
 		public string quiCommence()
 		{	
 			//Qui a la meilleur initiative
 			if(_listeArmeAttaque1[0].Initiative > _listeArmeAttaque2[0].Initiative){
 				_listeArmeAttaque1[0].Attaquer();
-				return _gla1.Nom+" attaque en premier avec "+_listeArmeAttaque1 [0].Nom;
+				return _gla1.Nom + " attaque en premier avec " + _listeArmeAttaque1 [0].Nom;
 			}
 			else if (_listeArmeAttaque1[0].Initiative < _listeArmeAttaque2[0].Initiative){
 				_listeArmeAttaque2[0].Attaquer();
-				return _gla2.Nom+" attaque en premier avec "+_listeArmeAttaque2[0].Nom;
+				return _gla2.Nom + " attaque en premier avec " + _listeArmeAttaque2 [0].Nom;
 			}
 			else if (_listeArmeAttaque1[0].Initiative == _listeArmeAttaque2[0].Initiative){
 				Random Random1 = new Random();
@@ -116,46 +115,79 @@ namespace Gladiateur
 				}
 				else if(random1>random2){
 					_listeArmeAttaque1[0].Attaquer();
-					return _gla1.Nom+" attaque en premier avec "+_listeArmeAttaque1 [0].Nom;
+					return _gla1.Nom + " attaque en premier avec " + _listeArmeAttaque1 [0].Nom;
 				}
 				else if (random2>random1){
 					_listeArmeAttaque2[0].Attaquer();
-					return _gla2.Nom+" attaque en premier avec "+_listeArmeAttaque2[0].Nom;
+					return _gla2.Nom + " attaque en premier avec " + _listeArmeAttaque2 [0].Nom;
 				}
 			}
+
 			return null;
 		}
 
 		public string Attaquer()
 		{
-			if (_listeArmeAttaque1[0].Attaquer() == true) 
+			while (_gla1.Vie == 1 || _gla1.Vie == 1) 
 			{
+				// Passe d'arme du gladiateur ayant l'initiative
+
+				if (_listeArmeAttaque1 [0].Attaquer () == true) 
+				{
+					_gla2.Vie = 0;
+					return("Le gladiateur \"" + _gla1.Nom + "\" a touché son ennemi avec son "+_listeArmeAttaque1 [0].Nom+" ! Le gladiateur \"" + _gla2.Nom + "\" est vaincu !");
+				}
+
+				if (_listeArmeAttaque1.Count >= 2 && _listeArmeAttaque1 [1].Attaquer () == true && _listeArmeAttaque1 [0].Attaquer () == false) 
+				{
+					_gla2.Vie = 0;
+					return("Le gladiateur \"" + _gla1.Nom + "\" a touché son ennemi avec son "+_listeArmeAttaque1 [1].Nom+" ! Le gladiateur \"" + _gla2.Nom + "\" est vaincu !");
+				}
+
 				if (_listeArmeDefense2[0].Defendre() == true)
 				{
 
-					return("Le gladiateur \"" + _gla2.Nom + "\" a bloqué l'attaque !");
+					Console.WriteLine("Le gladiateur \"" + _gla2.Nom + " a bloqué l'attaque du gladiateur "+_gla1.Nom+" avec son "+_listeArmeDefense2[0].Nom+" !");
 				}
 
-				return("Le gladiateur \"" + _gla1.Nom + "\" a touché son ennemi !");
+				if (_listeArmeDefense2.Count >= 2 && _listeArmeDefense2[1].Defendre() == true && _listeArmeDefense2[0].Defendre() == false)
+				{
+
+					Console.WriteLine("Le gladiateur \"" + _gla2.Nom + " a bloqué l'attaque du gladiateur "+_gla1.Nom+" avec son "+_listeArmeDefense2[1].Nom+" !");
+				}
 
 				Console.WriteLine("Le gladiateur \"" + _gla1.Nom + "\" a manqué son attaque !");
 
-				if (_listeArmeAttaque2[0].Attaquer() == true) 
+				// Passe d'arme du gladiateur n'ayant pas l'initiative
+
+				if (_listeArmeAttaque2 [0].Attaquer() == true) 
 				{
-					if (_listeArmeDefense1[0].Defendre() == true)
-					{
-
-						Console.WriteLine("Le gladiateur \"" + _gla1.Nom + "\" a bloqué l'attaque !");
-					}
-
 					_gla1.Vie = 0;
-					return("Le gladiateur \"" + _gla2.Nom + "\" a touché son ennemi ! Le gladiateur \"" + _gla1.Nom + "\" est vaincu !");
+					return("Le gladiateur \"" + _gla2.Nom + "\" a touché son ennemi avec son "+_listeArmeAttaque2[0].Nom+" ! Le gladiateur \"" + _gla1.Nom + "\" est vaincu !");
+				}
+
+				if (_listeArmeAttaque2.Count >= 2 && _listeArmeAttaque2 [1].Attaquer () == true && _listeArmeAttaque2 [0].Attaquer () == false) 
+				{
+					_gla2.Vie = 0;
+					return("Le gladiateur \"" + _gla2.Nom + "\" a touché son ennemi avec son "+_listeArmeAttaque2 [1].Nom+" ! Le gladiateur \"" + _gla1.Nom + "\" est vaincu !");
+				}
+
+				if (_listeArmeDefense1[0].Defendre() == true)
+				{
+
+					Console.WriteLine("Le gladiateur \"" + _gla1.Nom + " a bloqué l'attaque du gladiateur "+_gla2.Nom+" avec son "+_listeArmeDefense1[0].Nom+" !");
+				}
+
+				if (_listeArmeDefense1.Count >= 2 && _listeArmeDefense1[1].Defendre() == true && _listeArmeDefense1[0].Defendre() == false)
+				{
+
+					Console.WriteLine("Le gladiateur \"" + _gla1.Nom + " a bloqué l'attaque du gladiateur "+_gla2.Nom+" avec son "+_listeArmeDefense1[1].Nom+" !");
 				}
 
 				Console.WriteLine("Le gladiateur \"" + _gla2.Nom + "\" a manqué son attaque !");
 			}
 
-			return("Le gladiateur \"" + _gla1.Nom + "\" a manqué son attaque !");
+			return("Erreur de jeu");
 		}
 
 			/*	
@@ -187,5 +219,8 @@ namespace Gladiateur
 			}
 
 			*/
+
 	}
+
 }
+
