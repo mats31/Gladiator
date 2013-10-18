@@ -48,7 +48,7 @@ namespace Gladiateur.Armes
 		private float _pc_touche;
 		public float Pc_touche {
 			get { return this._pc_touche; }
-			protected set { this._pc_touche = value; }
+			set { this._pc_touche = value; }
 		}
 	
 		public abstract bool Attaquer ();

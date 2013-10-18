@@ -67,7 +67,8 @@ namespace Gladiateur
 			//gladiateur -> arme
 			//Bulls
 			l_rose.ListeArme.Add(l_epee);
-			l_rose.ListeArme.Add(l_bouclier_rond);
+			l_rose.ListeArme.Add(l_filet);
+			l_rose.ListeArme.Add(l_casque);
 
 			l_noah.ListeArme.Add(l_dague);
 			l_noah.ListeArme.Add(l_bouclier_rectangle);
