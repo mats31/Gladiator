@@ -119,23 +119,33 @@ namespace Gladiateur
 					_listeArmeAttaque2[0].Attaquer();
 				}
 			}
+<<<<<<< HEAD
 			//return _returnMagique;
+=======
+			return _returnArmeIni;
+>>>>>>> 5e3fa4f5fd844dc9b9c3edbb9575ef0dfd202a4a
 		}
 
 		public string Attaquer()
 		{
-			if (_listeArmeAttaque1[0].Attaquer() == true) 
+			while (_gla1.Vie == 1 || _gla1.Vie == 1) 
 			{
-				if (_listeArmeDefense2[0].Defendre() == true)
+				if (_listeArmeAttaque1[0].Attaquer() == true) 
 				{
+					if (_listeArmeDefense2[0].Defendre() == true)
+					{
 
-					return("Le gladiateur \"" + _gla2.Nom + "\" a bloqué l'attaque !");
+						Console.WriteLine("Le gladiateur \"" + _gla2.Nom + "\" a bloqué l'attaque !");
+					}
+
+					_gla2.Vie = 0;
+					return("Le gladiateur \"" + _gla1.Nom + "\" a touché son ennemi ! Le gladiateur \"" + _gla2.Nom + "\" est vaincu !");
 				}
 
-				return("Le gladiateur \"" + _gla1.Nom + "\" a touché son ennemi !");
+				Console.WriteLine("Le gladiateur \"" + _gla1.Nom + "\" a manqué son attaque !");
 			}
 
-			return("Le gladiateur \"" + _gla1.Nom + "\" a manqué son attaque !");
+			return("Erreur de jeu");
 		}
 
 			/*	
@@ -169,6 +179,11 @@ namespace Gladiateur
 			*/
 		
 
+<<<<<<< HEAD
 
 	}
+=======
+		}
+>>>>>>> 5e3fa4f5fd844dc9b9c3edbb9575ef0dfd202a4a
 }
+
