@@ -1,1 +1,7 @@
 c:\users\va bene\documents\visual studio 2012\Projects\Gladiateur\Gladiateur\bin\Debug\Gladiateur.exe.config
+C:\Users\Va Bene\Documents\GitHub\Gladiator\Gladiateur\Gladiateur\bin\Debug\Gladiateur.exe.config
+C:\Users\Va Bene\Documents\GitHub\Gladiator\Gladiateur\Gladiateur\obj\Debug\Gladiateur.exe
+C:\Users\Va Bene\Documents\GitHub\Gladiator\Gladiateur\Gladiateur\bin\Debug\Gladiateur.exe
+C:\Users\Va Bene\Documents\GitHub\Gladiator\Gladiateur\Gladiateur\bin\Debug\Gladiateur.pdb
+C:\Users\Va Bene\Documents\GitHub\Gladiator\Gladiateur\Gladiateur\obj\Debug\Gladiateur.csprojResolveAssemblyReference.cache
+C:\Users\Va Bene\Documents\GitHub\Gladiator\Gladiateur\Gladiateur\obj\Debug\Gladiateur.pdb

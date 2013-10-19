@@ -133,7 +133,7 @@ namespace Gladiateur
 
 			l_bulls.setPcVictoire(50);
 			l_celtics.setPcVictoire(60);
-			classement.recupEquipeFight ();
+			//classement.recupEquipeFight ();
 			classement.triListeEquipe ();
 			Console.WriteLine (classement.getClassement());
 

@@ -17,14 +17,25 @@ namespace Gladiateur
 		{
 		}
 
-		public Classement (Joueur j1, Joueur j2)
+		public Classement (params Joueur[] joueur)
 		{
-			_j1 = j1;
-			_j2 = j2;
-		}
+            // Vérification du nombre minimum de joueur
+            if (joueur.Length > 1) {
+                foreach (Joueur j in joueur) {
+                    // Vérification du nombre d'équipes
+                    if (j.ListeEquipe.Count > 0) {
+                        _equipeListe.Add(j.ListeEquipe[0]);
+                    } else {
+                        throw new Exception("Le joueur " + j.Alias + " n'a aucune d'équipe");
+                    }
+                }
+            } else {
+                throw new Exception("Minimum 2 joueurs");
+            }
+        }
 
 		//Méthode
-		public void recupEquipeFight()
+/*		public void recupEquipeFight()
 		{
 			foreach (var item in _equipeListe) {
 	
@@ -33,7 +44,7 @@ namespace Gladiateur
 			_equipeListe.Add(_j1.EquipeFight);
 			_equipeListe.Add(_j2.EquipeFight);
 		}
-
+*/
 		public void triListeEquipe()
 		{
 			_equipeListe = (from b_equipe in _equipeListe
