@@ -71,7 +71,7 @@ namespace Gladiateur
         }
 
 		//Méthode
-/*		public string equipeGlad()
+		public string equipeGlad()
 		{
 
 			foreach (Arme b_arme in ListeArme)
@@ -81,7 +81,7 @@ namespace Gladiateur
 
 			return null;
 		}
-*/
+
 		public void setArme(Arme a)
 		{
 			this.PointArme += a.Points;

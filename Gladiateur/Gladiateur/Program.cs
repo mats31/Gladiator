@@ -50,47 +50,47 @@ namespace Gladiateur
 
 		//Liste
 			//joueur -> equipe
-			l_j1.setEquipe(l_bulls);
-			l_j2.setEquipe(l_celtics);
+			l_j1.ListeEquipe.Add(l_bulls);
+			l_j2.ListeEquipe.Add(l_celtics);
 
 
 			//equipe -> gladiateur
-			l_bulls.setGladiateur(l_rose);
-			l_bulls.setGladiateur(l_noah);
-			l_bulls.setGladiateur(l_deng);
+			l_bulls.ListeGladiateur.Add(l_rose);
+			l_bulls.ListeGladiateur.Add(l_noah);
+			l_bulls.ListeGladiateur.Add(l_deng);
 
-			l_celtics.setGladiateur(l_rondo);
-			l_celtics.setGladiateur(l_pierce);
-			l_celtics.setGladiateur(l_green);	
+			l_celtics.ListeGladiateur.Add(l_rondo);
+			l_celtics.ListeGladiateur.Add(l_pierce);
+			l_celtics.ListeGladiateur.Add(l_green);	
 
 
 			//gladiateur -> arme
 			//Bulls
-			l_rose.setArme(l_epee);
-			l_rose.setArme(l_filet);
-			l_rose.setArme(l_casque);
+			l_rose.ListeArme.Add(l_epee);
+			l_rose.ListeArme.Add(l_filet);
+			l_rose.ListeArme.Add(l_casque);
 
-			l_noah.setArme(l_dague);
-			l_noah.setArme(l_bouclier_rectangle);
+			l_noah.ListeArme.Add(l_dague);
+			l_noah.ListeArme.Add(l_bouclier_rectangle);
 
-			l_deng.setArme(l_lance);
-			l_deng.setArme(l_casque);
+			l_deng.ListeArme.Add(l_lance);
+			l_deng.ListeArme.Add(l_casque);
 
 			//Celtics
-			l_rondo.setArme(l_trident);
-			l_rondo.setArme(l_casque);
+			l_rondo.ListeArme.Add(l_trident);
+			l_rondo.ListeArme.Add(l_casque);
 
-			l_pierce.setArme(l_filet);
-			l_pierce.setArme(l_dague);
-			l_pierce.setArme(l_casque);
+			l_pierce.ListeArme.Add(l_filet);
+			l_pierce.ListeArme.Add(l_dague);
+			l_pierce.ListeArme.Add(l_casque);
 
-			l_green.setArme(l_dague);
-			l_green.setArme(l_dague);
-			l_green.setArme(l_bouclier_rond);
+			l_green.ListeArme.Add(l_dague);
+			l_green.ListeArme.Add(l_dague);
+			l_green.ListeArme.Add(l_bouclier_rond);
 
 
 		//Return - Création
-/*			Console.WriteLine(l_j1.connexionJoueurs());
+			Console.WriteLine(l_j1.connexionJoueurs());
 			Console.WriteLine(l_j2.connexionJoueurs());
 			Console.WriteLine ("\n");
 			Console.WriteLine(l_j1.createEquipe());
@@ -110,39 +110,30 @@ namespace Gladiateur
 			l_pierce.equipeGlad ();
 			Console.WriteLine ("\n");
 			l_green.equipeGlad ();
-*/
-		//Recap
+
+		//Return Recap
 			Console.WriteLine ("\n\n***** ***** ***** ***** ***** *****\nRECAP\n***** ***** ***** ***** ***** *****");
 			Console.WriteLine ("J1 : "+l_j1.Alias+"\tJ2 : "+l_j2.Alias);
 			Console.WriteLine ("***** ***** ***** ***** ***** *****");
 			Console.WriteLine ("Equipes "+l_j1.Alias+" : "+l_j1.getListeEquipe());
 			Console.WriteLine ("Equipes "+l_j2.Alias+" : "+l_j2.getListeEquipe());
 			Console.WriteLine ("***** ***** ***** ***** ***** *****");
-			Console.WriteLine (l_j1.Alias+" - "+ l_j1.getEquipe(0).Nom + " : " + l_j1.getEquipe(0).getListeJoueur ());
-			Console.WriteLine (l_j2.Alias+" - "+ l_j2.getEquipe(0).Nom + " : " + l_j2.getEquipe(0).getListeJoueur ());
+			Console.WriteLine (l_j1.Alias+" - "+ l_j1.ListeEquipe [0].Nom + " : " + l_j1.ListeEquipe [0].getListeJoueur ());
+			Console.WriteLine (l_j2.Alias+" - "+ l_j2.ListeEquipe [0].Nom + " : " + l_j2.ListeEquipe [0].getListeJoueur ());
 			Console.WriteLine ("***** ***** ***** ***** ***** *****\n\n");
-		
-		//Choix
-			l_j1.choixEquipe (l_bulls);
-			l_j2.choixEquipe (l_celtics);
-
 
 		//Classement
 			Classement classement = new Classement (l_j1,l_j2);
-
-
 			l_bulls.setPcVictoire(50);
 			l_celtics.setPcVictoire(60);
-			//classement.recupEquipeFight ();
+			//classement.recupListeEquipe ();
 			classement.triListeEquipe ();
 			Console.WriteLine (classement.getClassement());
-
-		
 
 		//Combat
 			Combat l_bataille1 = new Combat (l_rose,l_rondo);
 			Console.WriteLine(l_bataille1.triArmeAttDef());
-			Console.WriteLine(l_bataille1.quiCommence());
+			//Console.WriteLine(l_bataille1.quiCommence());
 			Console.WriteLine(l_bataille1.Attaquer());
 
 

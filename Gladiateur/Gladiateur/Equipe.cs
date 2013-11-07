@@ -83,7 +83,7 @@ namespace Gladiateur
         }
 
 		//Méthodes
-/*		public string creerGlad()
+		public string creerGlad()
 		{
 
 			foreach (Gladiateur b_gladiateur in ListeGladiateur)
@@ -93,7 +93,7 @@ namespace Gladiateur
 
 			return null;
 		}
-*/		
+
 		public string getListeJoueur()
 		{
 			foreach (var b_joueur in ListeGladiateur) {

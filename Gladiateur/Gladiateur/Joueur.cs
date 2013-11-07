@@ -70,12 +70,12 @@ namespace Gladiateur
 		}
 
 		//Méthodes
-/*		public string connexionJoueurs()
+		public string connexionJoueurs()
 		{
 			return("Le joueur \""+this._alias+"\" est maintenant connecté."); 
 		}
-*/
-/*		public string createEquipe()
+
+	public string createEquipe()
 		{
 			_returnCreation = "***** ***** *****\n";
 			_returnCreation += "CREATION\n";
@@ -85,7 +85,7 @@ namespace Gladiateur
 
 			return _returnCreation; 
 		}
-*/
+
 		//Getters
 		public Equipe getEquipe(int i)
 		{
