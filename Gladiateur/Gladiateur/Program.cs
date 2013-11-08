@@ -90,37 +90,37 @@ namespace Gladiateur
 
 
 		//Return - Création
-			Console.WriteLine(l_j1.connexionJoueurs());
-			Console.WriteLine(l_j2.connexionJoueurs());
-			Console.WriteLine ("\n");
-			Console.WriteLine(l_j1.createEquipe());
+			Message.showMessage(l_j1.connexionJoueurs());
+			Message.showMessage(l_j2.connexionJoueurs());
+			Message.showMessage ("\n");
+			Message.showMessage(l_j1.createEquipe());
 			l_bulls.creerGlad ();
-			Console.WriteLine ("\n");
+			Message.showMessage ("\n");
 			l_rose.equipeGlad ();
-			Console.WriteLine ("\n");
+			Message.showMessage ("\n");
 			l_noah.equipeGlad ();
-			Console.WriteLine ("\n");
+			Message.showMessage ("\n");
 			l_deng.equipeGlad ();
-			Console.WriteLine ("\n");
-			Console.WriteLine(l_j2.createEquipe());
+			Message.showMessage ("\n");
+			Message.showMessage(l_j2.createEquipe());
 			l_celtics.creerGlad ();
-			Console.WriteLine ("\n");
+			Message.showMessage ("\n");
 			l_rondo.equipeGlad ();
-			Console.WriteLine ("\n");
+			Message.showMessage ("\n");
 			l_pierce.equipeGlad ();
-			Console.WriteLine ("\n");
+			Message.showMessage ("\n");
 			l_green.equipeGlad ();
 
 		//Return Recap
-			Console.WriteLine ("\n\n***** ***** ***** ***** ***** *****\nRECAP\n***** ***** ***** ***** ***** *****");
-			Console.WriteLine ("J1 : "+l_j1.Alias+"\tJ2 : "+l_j2.Alias);
-			Console.WriteLine ("***** ***** ***** ***** ***** *****");
-			Console.WriteLine ("Equipes "+l_j1.Alias+" : "+l_j1.getListeEquipe());
-			Console.WriteLine ("Equipes "+l_j2.Alias+" : "+l_j2.getListeEquipe());
-			Console.WriteLine ("***** ***** ***** ***** ***** *****");
-			Console.WriteLine (l_j1.Alias+" - "+ l_j1.ListeEquipe [0].Nom + " : " + l_j1.ListeEquipe [0].getListeJoueur ());
-			Console.WriteLine (l_j2.Alias+" - "+ l_j2.ListeEquipe [0].Nom + " : " + l_j2.ListeEquipe [0].getListeJoueur ());
-			Console.WriteLine ("***** ***** ***** ***** ***** *****\n\n");
+			Message.showMessage ("\n\n***** ***** ***** ***** ***** *****\nRECAP\n***** ***** ***** ***** ***** *****");
+			Message.showMessage ("J1 : "+l_j1.Alias+"\tJ2 : "+l_j2.Alias);
+			Message.showMessage ("***** ***** ***** ***** ***** *****");
+			Message.showMessage ("Equipes "+l_j1.Alias+" : "+l_j1.getListeEquipe());
+			Message.showMessage ("Equipes "+l_j2.Alias+" : "+l_j2.getListeEquipe());
+			Message.showMessage ("***** ***** ***** ***** ***** *****");
+			Message.showMessage (l_j1.Alias+" - "+ l_j1.ListeEquipe [0].Nom + " : " + l_j1.ListeEquipe [0].getListeJoueur ());
+			Message.showMessage (l_j2.Alias+" - "+ l_j2.ListeEquipe [0].Nom + " : " + l_j2.ListeEquipe [0].getListeJoueur ());
+			Message.showMessage ("***** ***** ***** ***** ***** *****\n\n");
 
 		//Classement
 			Classement classement = new Classement (l_j1,l_j2);
@@ -128,13 +128,13 @@ namespace Gladiateur
 			l_celtics.setPcVictoire(60);
 			//classement.recupListeEquipe ();
 			classement.triListeEquipe ();
-			Console.WriteLine (classement.getClassement());
+			Message.showMessage (classement.getClassement());
 
 		//Combat
 			Combat l_bataille1 = new Combat (l_rose,l_rondo);
-			Console.WriteLine(l_bataille1.triArmeAttDef());
-			//Console.WriteLine(l_bataille1.quiCommence());
-			Console.WriteLine(l_bataille1.Attaquer());
+			Message.showMessage(l_bataille1.triArmeAttDef());
+			//Message.showMessage(l_bataille1.quiCommence());
+			Message.showMessage(l_bataille1.Attaquer());
 
 
         }

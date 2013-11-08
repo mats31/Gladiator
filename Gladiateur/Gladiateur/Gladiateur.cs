@@ -76,7 +76,7 @@ namespace Gladiateur
 
 			foreach (Arme b_arme in ListeArme)
 			{
-				Console.WriteLine("Le gladiateur \""+this.Nom+"\" s'équipe avec : "+b_arme.Nom+".");
+				Message.showMessage("Le gladiateur \""+this.Nom+"\" s'équipe avec : "+b_arme.Nom+".");
 			}
 
 			return null;
@@ -88,9 +88,9 @@ namespace Gladiateur
 
 			if (this.PointArme <= 10) {
 				this.ListeArme.Add (a);
-				Console.WriteLine("Le gladiateur "+this.Nom+" s'équipe avec : "+a.Nom+".");
+				Message.showMessage("Le gladiateur "+this.Nom+" s'équipe avec : "+a.Nom+".");
 			} else {
-				Console.WriteLine ("Ce gladiateur possède déjà "+PointArme+" points d'armes");
+				Message.showMessage ("Ce gladiateur possède déjà "+PointArme+" points d'armes");
 			}
 		}
 

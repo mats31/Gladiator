@@ -136,14 +136,14 @@ namespace Gladiateur
 				if (_gla2.Vie == 1) {
 					if (_listeArmeAttaque1 [0].Initiative == 1 && utilise1 == 1|| (_listeArmeAttaque1.Count >= 2 && _listeArmeAttaque1 [1].Initiative == 1 && utilise1 == 1)) 
 					{
-						Console.WriteLine(filet(utilise1, _gla1));
+						Message.showMessage(filet(utilise1, _gla1));
 						utilise1 = 0;
 					}
 				}
 				if (_gla1.Vie == 1) {
 					if (_listeArmeAttaque2 [0].Initiative == 1 && utilise2 == 1|| (_listeArmeAttaque2.Count >= 2 && _listeArmeAttaque2 [1].Initiative == 1 && utilise2 == 1))
 					{
-						Console.WriteLine(filet(utilise2, _gla2));
+						Message.showMessage(filet(utilise2, _gla2));
 						utilise2 = 0;
 					}
 				}
@@ -151,52 +151,52 @@ namespace Gladiateur
 				if (_gla2.Vie == 1) {
 					if (_listeArmeAttaque1 [0].Initiative == 2 || (_listeArmeAttaque1.Count >= 2 && _listeArmeAttaque1 [1].Initiative == 2))
 					{
-						Console.WriteLine(lance(_gla1, _gla2));
+						Message.showMessage(lance(_gla1, _gla2));
 					}
 				}
 				if (_gla1.Vie == 1) {
 					if (_listeArmeAttaque2 [0].Initiative == 2 || (_listeArmeAttaque2.Count >= 2 && _listeArmeAttaque2 [1].Initiative == 2))
 					{
-						Console.WriteLine(lance(_gla2, _gla1));
+						Message.showMessage(lance(_gla2, _gla1));
 					}
 				}
 
 				if (_gla2.Vie == 1) {
 					if (_listeArmeAttaque1 [0].Initiative == 3 || (_listeArmeAttaque1.Count >= 2 && _listeArmeAttaque1 [1].Initiative == 3))
 					{
-						Console.WriteLine(trident(_gla1, _gla2));
+						Message.showMessage(trident(_gla1, _gla2));
 					}
 				}
 				if (_gla1.Vie == 1) {
 					if (_listeArmeAttaque2 [0].Initiative == 3 || (_listeArmeAttaque2.Count >= 2 && _listeArmeAttaque2 [1].Initiative == 3))
 					{
-						Console.WriteLine(trident(_gla2, _gla1));
+						Message.showMessage(trident(_gla2, _gla1));
 					}
 				}
 				
 				if (_gla2.Vie == 1) {
 					if (_listeArmeAttaque1 [0].Initiative == 4 || (_listeArmeAttaque1.Count >= 2 && _listeArmeAttaque1 [1].Initiative == 4))
 					{
-						Console.WriteLine(epee(_gla1, _gla2));
+						Message.showMessage(epee(_gla1, _gla2));
 					}
 				}
 				if (_gla1.Vie == 1) {
 					if (_listeArmeAttaque2 [0].Initiative == 4 || (_listeArmeAttaque2.Count >= 2 && _listeArmeAttaque2 [1].Initiative == 4))
 					{
-						Console.WriteLine(epee(_gla2, _gla1));
+						Message.showMessage(epee(_gla2, _gla1));
 					}
 				}
 
 				if (_gla2.Vie == 1) {
 					if (_listeArmeAttaque1 [0].Initiative == 5 || (_listeArmeAttaque1.Count >= 2 && _listeArmeAttaque1 [1].Initiative == 5))
 					{
-						Console.WriteLine(dague(_gla1, _gla2));
+						Message.showMessage(dague(_gla1, _gla2));
 					}
 				}
 				if (_gla1.Vie == 1) {
 					if (_listeArmeAttaque2 [0].Initiative == 5 || (_listeArmeAttaque2.Count >= 2 && _listeArmeAttaque2 [1].Initiative == 5))
 					{
-						Console.WriteLine(dague(_gla2, _gla1));
+						Message.showMessage(dague(_gla2, _gla1));
 					}
 				}
 			}

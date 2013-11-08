@@ -66,7 +66,6 @@ namespace Gladiateur
 			this.Alias  = alias;
 			this.Date   = _date;
 			this.ListeEquipe = new List<Equipe> ();
-			Console.WriteLine ("Le joueur \""+this._alias+"\" est maintenant connecté.");
 		}
 
 		//Méthodes
@@ -105,16 +104,16 @@ namespace Gladiateur
 		{
 			if (this.ListeEquipe.Count < 5) {
 				this.ListeEquipe.Add (e);
-				Console.WriteLine (this._alias + " a créé l'équipe " + this._listeEquipe [this._listeEquipe.Count - 1].Nom + ".");
+				Message.showMessage (this._alias + " a créé l'équipe " + this._listeEquipe [this._listeEquipe.Count - 1].Nom + ".");
 			} else {
-				Console.WriteLine ("Ce joueur possède déjà 5 équipes");
+				Message.showMessage ("Ce joueur possède déjà 5 équipes");
 			}
 		}
 
 		public void choixEquipe(Equipe e)
 		{
 			this._equipeFight = e;
-			Console.WriteLine (this._alias+" choisit l\'équipe "+e.Nom+" pour se battre");
+			Message.showMessage (this._alias+" choisit l\'équipe "+e.Nom+" pour se battre");
 		}
 
     }

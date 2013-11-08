@@ -88,7 +88,7 @@ namespace Gladiateur
 
 			foreach (Gladiateur b_gladiateur in ListeGladiateur)
 			{
-				Console.WriteLine("\""+b_gladiateur.Nom+"\" rejoint l'équipe des "+this.Nom+".");
+				Message.showMessage("\""+b_gladiateur.Nom+"\" rejoint l'équipe des "+this.Nom+".");
 			}
 
 			return null;
@@ -111,9 +111,9 @@ namespace Gladiateur
 		{
 			if (this.ListeGladiateur.Count < 3) {
 				this.ListeGladiateur.Add (g);
-				Console.WriteLine(g.Nom+" rejoint l'équipe des "+this.Nom+".");
+				Message.showMessage(g.Nom+" rejoint l'équipe des "+this.Nom+".");
 			} else {
-				Console.WriteLine ("Cette équipe possède déjà 3 gladiateurs");
+				Message.showMessage ("Cette équipe possède déjà 3 gladiateurs");
 			}
 		}
 		/*
