@@ -201,15 +201,7 @@ namespace Gladiateur
 				}
 			}
 
-			if (_gla1.Vie == 0) 
-			{
-				Round.recupGlaMort (_gla1);
-			}
 
-			if (_gla2.Vie == 0) 
-			{
-				Round.recupGlaMort (_gla2);
-			}
 			return("Le combat est terminé !");
 		}
 

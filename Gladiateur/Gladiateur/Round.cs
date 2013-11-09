@@ -75,6 +75,16 @@ namespace Gladiateur
             l_bataille1.triArmeAttDef();
             l_bataille1.quiCommence();
             l_bataille1.Attaquer();
+			
+			if (gla1.Vie == 0) 
+			{
+				this.recupGlaMort (gla1);
+			}
+
+			if (gla2.Vie == 0) 
+			{
+				this.recupGlaMort (gla2);
+			}
         }
 
         //ICI
@@ -86,20 +96,40 @@ namespace Gladiateur
         //étape1 : je récupère l'attribut gla1 ou gla2 envoyé en paramètre
         //étape2 : je teste si ce gladiateur correspond à un gladiateur de _listeGladiateur1 ou de _listeGladiateur2 (avec un foreach)
         //étape3 : j'appelle la méthode nextRound() avec comme paramètre le gladiateur qui appartient à l'une des deux listes
-        public static void recupGlaMort(Gladiateur glaMort) //récupère le glaMort et vérifie si il fait partie de eq1 ou eq2 (on l'appelera dans la classe Combat)
+        public void recupGlaMort(Gladiateur glaMort) //récupère le glaMort et vérifie si il fait partie de eq1 ou eq2 (on l'appelera dans la classe Combat)
         {
             //test si glaMort fait partie de _listeGladiateur1
             foreach (Gladiateur b_gla in _listeGladiateur1)
             {
                 if (b_gla == glaMort)
                 {
-                    
+					this.nextRound (b_gla);
                 }
             }
         }
 
         public void nextRound() //quand un gla meurt, lance le combat suivant
         {
+			//Mort gladiateur    
+			//si gla1[i] est mort (Combat)
+			//gla1[i+1] vs gla2[j]
+
+			//si gla2[i] est mort (Combat)
+			//gla1[i] vs gla2[j+1]
+
+
+			//Fin combat 
+			//si gla1[i] == 3
+			//joueur2 gagne
+			//joueur2 victoire++ et match_joue++
+			//joueur1 défaite++ et match_joue++
+
+
+			//si gla2[i] == 3
+			//joueur1 gagne
+			//joueur1 victoire++ et match_joue++
+			//joueur2 défaite++ et match_joue++
+
 
         }
     }
