@@ -73,6 +73,7 @@ namespace Gladiateur
         {
             Combat l_bataille1 = new Combat(gla1, gla2);
             l_bataille1.triArmeAttDef();
+            l_bataille1.quiCommence();
             l_bataille1.Attaquer();
         }
 
