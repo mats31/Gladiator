@@ -63,6 +63,7 @@
     <Compile Include="Combat.cs" />
     <Compile Include="Classement.cs" />
     <Compile Include="Message.cs" />
+    <Compile Include="Round.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

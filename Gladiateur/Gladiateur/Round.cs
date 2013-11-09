@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gladiateur
 {
-    class Round
+    static class Round
     {
     //CE QU'ON DOIT FAIRE MATHOU :)
         //Premier combat
@@ -49,7 +49,7 @@ namespace Gladiateur
         }
 
         //Méthode
-        public void recupEquipe()
+        public static void recupEquipe()
         {
             //Récupération gladiateurs équipe 1
             foreach (Gladiateur b_gla in this._eq1.ListeGladiateur)
@@ -64,7 +64,7 @@ namespace Gladiateur
             }
         }
 
-        public void firstRound() //lance le 1e combat : gla1[0] vs gla2[0]
+        public static void firstRound() //lance le 1e combat : gla1[0] vs gla2[0]
         {
             Combat l_bataille1 = new Combat(_listeGladiateur1[0], _listeGladiateur2[0]);
             l_bataille1.triArmeAttDef();
@@ -80,9 +80,16 @@ namespace Gladiateur
         //étape1 : je récupère l'attribut gla1 ou gla2 envoyé en paramètre
         //étape2 : je teste si ce gladiateur correspond à un gladiateur de _listeGladiateur1 ou de _listeGladiateur2 (avec un foreach)
         //étape3 : j'appelle la méthode nextRound() avec comme paramètre le gladiateur qui appartient à l'une des deux listes
-        public void recupGlaMort(Gladiateur glaMort) //récupère le glaMort et vérifie si il fait partie de eq1 ou eq2 (on l'appelera dans la classe Combat)
+        public static void recupGlaMort(Gladiateur glaMort) //récupère le glaMort et vérifie si il fait partie de eq1 ou eq2 (on l'appelera dans la classe Combat)
         {
 
+			foreach (Gladiateur b_gla in this._eq1.ListeGladiateur)
+			{
+				if (b_gla == glaMort) 
+				{
+
+				}
+			}
         }
 
         public void nextRound() //quand un gla meurt, lance le combat suivant
