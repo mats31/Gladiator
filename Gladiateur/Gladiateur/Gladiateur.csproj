@@ -76,8 +76,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <Folder Include="Armes\" />
-    <Folder Include="Armes\Interface\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
