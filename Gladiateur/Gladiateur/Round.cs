@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gladiateur
 {
-    static class Round
+    class Round
     {
         //CE QU'ON DOIT FAIRE MATHOU :)
         //Premier combat
@@ -52,7 +52,7 @@ namespace Gladiateur
         }
 
         //Méthode
-        public static void recupEquipe()
+        public void recupEquipe()
         {
             //Récupération gladiateurs équipe 1
             foreach (Gladiateur b_gla in _eq1.ListeGladiateur)
