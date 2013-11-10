@@ -13,7 +13,6 @@ namespace Gladiateur.Armes
 		//Méthode
 		public override bool Attaquer()
 		{
-
 			int randomNumber = Random_generate.rInt ();
 			Console.WriteLine ("Voilà la valeur de randomNumber de l'épée :");
 			Console.WriteLine (randomNumber);

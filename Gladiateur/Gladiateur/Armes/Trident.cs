@@ -18,6 +18,7 @@ namespace Gladiateur.Armes
 			Console.WriteLine (randomNumber);
 			Console.WriteLine ("Voilà la valeur de pcTouche du trident :");
 			Console.WriteLine (this.Pc_touche);
+
 			if (Pc_touche >= randomNumber) 
 			{
 				return true;
@@ -32,9 +33,11 @@ namespace Gladiateur.Armes
 		}
 		public override bool Defendre()
 		{
+
 			int randomNumber = Random_generate.rInt ();
 			Console.WriteLine ("Voilà la valeur de randomNumber de défense du trident :");
 			Console.WriteLine (randomNumber);
+
 			if (Pc_touche >= randomNumber) 
 			{
 				return true;

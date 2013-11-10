@@ -9,8 +9,20 @@ namespace Gladiateur
 		//Attributs
 		private int i=1;
 		private string _classement;
-		private List<Equipe> _equipeListe = new List<Equipe> ();
-		private Joueur _j1, _j2;
+		//private List<Equipe> _equipeClassement = new List<Equipe> ();
+        private List<Equipe> _equipeClassement = new List<Equipe>();
+        public List<Equipe> EquipeClassement
+        {
+            get
+            {
+                return _equipeClassement;
+            }
+            private set
+            {
+                _equipeClassement = value;
+            }
+        }
+
 
 		//Constructeur
 		public Classement ()
@@ -24,7 +36,7 @@ namespace Gladiateur
                 foreach (Joueur j in joueur) {
                     // Vérification du nombre d'équipes
                     if (j.ListeEquipe.Count > 0) {
-                        _equipeListe.Add(j.ListeEquipe[0]);
+                        EquipeClassement.Add(j.ListeEquipe[0]);
                     } else {
                         throw new Exception("Le joueur " + j.Alias + " n'a aucune d'équipe");
                     }
@@ -47,7 +59,7 @@ namespace Gladiateur
 */
 		public void triListeEquipe()
 		{
-			_equipeListe = (from b_equipe in _equipeListe
+            _equipeClassement = (from b_equipe in _equipeClassement
 			              			orderby b_equipe.pcVictoire descending
 			               			select b_equipe).ToList ();
 		}
@@ -57,7 +69,8 @@ namespace Gladiateur
 			_classement += "\n\n***** ***** *****\n";
 			_classement += "CLASSEMENT\n";
 			_classement += "***** ***** *****\n";
-			foreach (var b_equipe in _equipeListe) {
+            foreach (var b_equipe in _equipeClassement)
+            {
 				_classement += i;
 				_classement += " ";
 				_classement += b_equipe.Nom;
