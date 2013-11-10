@@ -15,8 +15,8 @@ namespace Gladiateur.Armes
 		{
 
 			int randomNumber = rand.Next (0, 100);
-			Console.WriteLine ("Voilà la valeur de randomNumber de l'épée :");
-			Console.WriteLine (randomNumber);
+			//Console.WriteLine ("Voilà la valeur de randomNumber de l'épée :");
+			//Console.WriteLine (randomNumber);
 			if (Pc_touche >= randomNumber) 
 			{
 				return true;
