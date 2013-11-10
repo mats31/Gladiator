@@ -16,8 +16,8 @@ namespace Gladiateur
 			//joueur
 			Joueur l_j1 = new Joueur("Biabiany", "Mathis", "Tisma93");
 			Joueur l_j2 = new Joueur ("Bui", "Bernard", "BuiToni");
-            //Joueur l_j3 = new Joueur("Yegin", "Gokan", "Gokan");
-            //Joueur l_j4 = new Joueur("Frichet", "Guillaume", "Friscetto");
+            Joueur l_j3 = new Joueur("Yegin", "Gokan", "Gokan");
+            Joueur l_j4 = new Joueur("Frichet", "Guillaume", "Friscetto");
 
 			//equipe
 			Equipe l_bulls = new Equipe ("Chicago Bulls", "L'équipe des Bulls venu du United Center");
@@ -28,9 +28,9 @@ namespace Gladiateur
 			Equipe l_nuggets = new Equipe ("Denver Nuggets", "L'équipe des Nuggets venu du Pepsi Center");
 			Equipe l_spurs = new Equipe ("Spurs San Antonio", "L'équipe des Spurs venu du AT&T Center");
 
-            //Equipe l_psg = new Equipe("PSG", "L'équipe du PSG venu de Dubaï");
+            Equipe l_psg = new Equipe("PSG", "L'équipe du PSG venu de Dubaï");
 
-            //Equipe l_breakingbad = new Equipe("BB", "L'équipe de Breaking Bad venu des States");
+            Equipe l_breakingbad = new Equipe("Breaking Bad", "L'équipe de Breaking Bad venu des States");
 
 			//gladiateur
 			Gladiateur l_rose = new Gladiateur ("Rose");
@@ -39,7 +39,15 @@ namespace Gladiateur
 
 			Gladiateur l_rondo = new Gladiateur ("Rondo");
 			Gladiateur l_pierce = new Gladiateur ("Pierce");
-			Gladiateur l_green = new Gladiateur ("Green"); 
+			Gladiateur l_green = new Gladiateur ("Green");
+
+            Gladiateur l_zlatan = new Gladiateur("Zlatan");
+            Gladiateur l_matuidi = new Gladiateur("Matuidi");
+            Gladiateur l_cavani = new Gladiateur("Cavani");
+
+            Gladiateur l_walter = new Gladiateur("Walter");
+            Gladiateur l_skyler = new Gladiateur("Skyler");
+            Gladiateur l_jesse = new Gladiateur("Jesse");
 
 			//arme
 			Filet l_filet = new Filet ();
@@ -58,8 +66,8 @@ namespace Gladiateur
 			//joueur -> equipe
 			l_j1.ListeEquipe.Add(l_bulls);
 			l_j2.ListeEquipe.Add(l_celtics);
-            //l_j3.ListeEquipe.Add(l_psg);
-            //l_j4.ListeEquipe.Add(l_breakingbad);
+            l_j3.ListeEquipe.Add(l_psg);
+            l_j4.ListeEquipe.Add(l_breakingbad);
 
 			//equipe -> gladiateur
 			l_bulls.ListeGladiateur.Add(l_rose);
@@ -68,8 +76,15 @@ namespace Gladiateur
 
 			l_celtics.ListeGladiateur.Add(l_rondo);
 			l_celtics.ListeGladiateur.Add(l_pierce);
-			l_celtics.ListeGladiateur.Add(l_green);	
+			l_celtics.ListeGladiateur.Add(l_green);
 
+            l_psg.ListeGladiateur.Add(l_zlatan);
+            l_psg.ListeGladiateur.Add(l_matuidi);
+            l_psg.ListeGladiateur.Add(l_cavani);
+
+            l_breakingbad.ListeGladiateur.Add(l_walter);
+            l_breakingbad.ListeGladiateur.Add(l_skyler);
+            l_breakingbad.ListeGladiateur.Add(l_jesse);
 
 			//gladiateur -> arme
 			//Bulls
@@ -95,6 +110,28 @@ namespace Gladiateur
 			l_green.ListeArme.Add(l_dague);
 			l_green.ListeArme.Add(l_bouclier_rond);
 
+            //PSG
+            l_zlatan.ListeArme.Add(l_epee);
+            l_zlatan.ListeArme.Add(l_filet);
+            l_zlatan.ListeArme.Add(l_casque);
+
+            l_matuidi.ListeArme.Add(l_dague);
+            l_matuidi.ListeArme.Add(l_bouclier_rectangle);
+
+            l_cavani.ListeArme.Add(l_lance);
+            l_cavani.ListeArme.Add(l_casque);
+
+            //Breaking Bad
+            l_walter.ListeArme.Add(l_trident);
+            l_walter.ListeArme.Add(l_casque);
+
+            l_skyler.ListeArme.Add(l_filet);
+            l_skyler.ListeArme.Add(l_dague);
+            l_skyler.ListeArme.Add(l_casque);
+
+            l_jesse.ListeArme.Add(l_dague);
+            l_jesse.ListeArme.Add(l_dague);
+            l_jesse.ListeArme.Add(l_bouclier_rond);
 
 		//Return - Création
 			Message.showMessage(l_j1.connexionJoueurs());
@@ -130,11 +167,11 @@ namespace Gladiateur
 			Message.showMessage ("***** ***** ***** ***** ***** *****\n\n");
 
 		//Classement
-			Classement classement = new Classement (l_j1,l_j2/*,l_j3,l_j4*/);
+			Classement classement = new Classement (l_j1,l_j2,l_j3,l_j4);
 			l_bulls.setPcVictoire(50);
 			l_celtics.setPcVictoire(60);
-            //l_psg.setPcVictoire(40);
-            //l_breakingbad.setPcVictoire(30);
+            l_psg.setPcVictoire(40);
+            l_breakingbad.setPcVictoire(30);
 			classement.triListeEquipe ();
 			Message.showMessage (classement.getClassement());
 
