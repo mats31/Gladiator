@@ -15,7 +15,7 @@ namespace Gladiateur
 		private List<Arme> _listeArmeAttaque2  = new List<Arme> ();
 		private List<Arme> _listeArmeDefense2  = new List<Arme> ();
 		private string _returnArmeAttDef;
-		private string _returnArmeIni;
+		//private string _returnArmeIni;
 
 		//Constructeur
 		public Combat (Gladiateur gla1, Gladiateur gla2)
