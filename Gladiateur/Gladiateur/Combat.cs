@@ -309,7 +309,7 @@ namespace Gladiateur
 			{
 				if (_listeArmeDefense1 [0].Defendre () == true) {
 
-					return("Le gladiateur \"" + gla2.Nom + " a bloqué l'attaque du gladiateur " + _gla1.Nom + " avec son " + _listeArmeDefense1 [0].Nom + " !");
+					return("Le gladiateur \"" + gla2.Nom + " a bloqué l'attaque du gladiateur " + gla1.Nom + " avec son " + _listeArmeDefense1 [0].Nom + " !");
 				}
 
 				if (_listeArmeDefense1.Count >= 2 && _listeArmeDefense2 [1].Defendre () == true && _listeArmeDefense1 [0].Defendre () == false) {
@@ -358,7 +358,7 @@ namespace Gladiateur
 				if (_listeArmeDefense1[0].Defendre() == true)
 				{
 
-					return("Le gladiateur \"" + gla2.Nom + " a bloqué l'attaque du gladiateur "+gla1.Nom+" avec son "+_listeArmeDefense2[0].Nom+" !");
+					return("Le gladiateur \"" + gla2.Nom + " a bloqué l'attaque du gladiateur "+gla1.Nom+" avec son "+_listeArmeDefense1[0].Nom+" !");
 				}
 
 				if (_listeArmeDefense1.Count >= 2 && _listeArmeDefense1[1].Defendre() == true && _listeArmeDefense1[0].Defendre() == false)

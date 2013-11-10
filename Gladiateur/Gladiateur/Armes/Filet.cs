@@ -10,11 +10,10 @@ namespace Gladiateur.Armes
 		{
 		}
 
-		Random rand = new Random();
 		//Méthode
 		public override bool Attaquer()
 		{
-			int randomNumber = 9;
+			int randomNumber = Random_generate.rInt ();
 
 			if (Pc_touche >= randomNumber) 
 			{

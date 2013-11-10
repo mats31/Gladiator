@@ -14,8 +14,9 @@ namespace Gladiateur.Armes
 		//Méthode
 		public override bool Defendre()
 		{
-			int randomNumber = rand.Next (0, 100);
-
+			int randomNumber = Random_generate.rInt ();
+			Console.WriteLine ("Voilà la valeur de randomNumber du bouclier rectandulaire :");
+			Console.WriteLine (randomNumber);
 			if (Pc_touche >= randomNumber) 
 			{
 				return true;

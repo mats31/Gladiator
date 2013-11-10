@@ -10,12 +10,13 @@ namespace Gladiateur.Armes
 		{
 		}
 
-		Random rand = new Random();
+		private static Random rand = new Random();
 		//Méthode
 		public override bool Defendre() 
 		{
-			int randomNumber = rand.Next (0, 100);
-
+			int randomNumber = Random_generate.rInt ();
+			Console.WriteLine ("Voilà la valeur de randomNumber du casque :");
+			Console.WriteLine (randomNumber);
 			if (Pc_touche >= randomNumber) 
 			{
 				return true;

@@ -9,12 +9,12 @@ namespace Gladiateur.Armes
 			:base("épée",5,true,false,4,70)
 		{
 		}
-		Random rand = new Random();
+		private static Random rand = new Random();
 		//Méthode
 		public override bool Attaquer()
 		{
 
-			int randomNumber = rand.Next (0, 100);
+			int randomNumber = Random_generate.rInt ();
 			Console.WriteLine ("Voilà la valeur de randomNumber de l'épée :");
 			Console.WriteLine (randomNumber);
 			if (Pc_touche >= randomNumber) 
