@@ -16,8 +16,8 @@ namespace Gladiateur
 			//joueur
 			Joueur l_j1 = new Joueur("Biabiany", "Mathis", "Tisma93");
 			Joueur l_j2 = new Joueur ("Bui", "Bernard", "BuiToni");
-            Joueur l_j3 = new Joueur("Yegin", "Gokan", "Gokan");
-            Joueur l_j4 = new Joueur("Frichet", "Guillaume", "Friscetto");
+            //Joueur l_j3 = new Joueur("Yegin", "Gokan", "Gokan");
+            //Joueur l_j4 = new Joueur("Frichet", "Guillaume", "Friscetto");
 
 			//equipe
 			Equipe l_bulls = new Equipe ("Chicago Bulls", "L'équipe des Bulls venu du United Center");
@@ -28,9 +28,9 @@ namespace Gladiateur
 			Equipe l_nuggets = new Equipe ("Denver Nuggets", "L'équipe des Nuggets venu du Pepsi Center");
 			Equipe l_spurs = new Equipe ("Spurs San Antonio", "L'équipe des Spurs venu du AT&T Center");
 
-            Equipe l_psg = new Equipe("PSG", "L'équipe du PSG venu de Dubaï");
+            //Equipe l_psg = new Equipe("PSG", "L'équipe du PSG venu de Dubaï");
 
-            Equipe l_breakingbad = new Equipe("BB", "L'équipe de Breaking Bad venu des States");
+            //Equipe l_breakingbad = new Equipe("BB", "L'équipe de Breaking Bad venu des States");
 
 			//gladiateur
 			Gladiateur l_rose = new Gladiateur ("Rose");
@@ -58,8 +58,8 @@ namespace Gladiateur
 			//joueur -> equipe
 			l_j1.ListeEquipe.Add(l_bulls);
 			l_j2.ListeEquipe.Add(l_celtics);
-            l_j3.ListeEquipe.Add(l_psg);
-            l_j4.ListeEquipe.Add(l_breakingbad);
+            //l_j3.ListeEquipe.Add(l_psg);
+            //l_j4.ListeEquipe.Add(l_breakingbad);
 
 			//equipe -> gladiateur
 			l_bulls.ListeGladiateur.Add(l_rose);
@@ -130,11 +130,11 @@ namespace Gladiateur
 			Message.showMessage ("***** ***** ***** ***** ***** *****\n\n");
 
 		//Classement
-			Classement classement = new Classement (l_j1,l_j2,l_j3,l_j4);
+			Classement classement = new Classement (l_j1,l_j2/*,l_j3,l_j4*/);
 			l_bulls.setPcVictoire(50);
 			l_celtics.setPcVictoire(60);
-            l_psg.setPcVictoire(40);
-            l_breakingbad.setPcVictoire(30);
+            //l_psg.setPcVictoire(40);
+            //l_breakingbad.setPcVictoire(80);
 			//classement.recupListeEquipe ();
 			classement.triListeEquipe ();
 			Message.showMessage (classement.getClassement());
@@ -147,7 +147,7 @@ namespace Gladiateur
 			Message.showMessage(l_bataille1.Attaquer());
 */
 		//Round
-		//	Round l_round1 = new Round(l_bulls, l_celtics);
+			//Round l_round1 = new Round(l_bulls, l_celtics);
 
         //Match
             Match l_match1 = new Match(classement.EquipeClassement);
