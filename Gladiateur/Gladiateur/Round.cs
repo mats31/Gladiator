@@ -40,6 +40,8 @@ namespace Gladiateur
         //Attributs
         private Equipe _eq1;
         private Equipe _eq2;
+		private int _index1 = 0;
+		private int _index2 = 0;
         private List<Gladiateur> _listeGladiateur1 = new List<Gladiateur>();
         private List<Gladiateur> _listeGladiateur2 = new List<Gladiateur>();
 
@@ -60,30 +62,40 @@ namespace Gladiateur
                 _listeGladiateur1.Add(b_gla);
             }
 
+
+
             //Récupération gladiateurs équipe 2
             foreach (Gladiateur b_gla in _eq2.ListeGladiateur)
             {
                 _listeGladiateur2.Add(b_gla);
             }
             
-            firstRound(_eq1.ListeGladiateur[0], _eq2.ListeGladiateur[0]);
+            launchRound(_eq1.ListeGladiateur[0], _eq2.ListeGladiateur[0]);
         }
 
-        public void firstRound(Gladiateur gla1, Gladiateur gla2) //lance le 1e combat : gla1[0] vs gla2[0]
+        public void launchRound(Gladiateur gla1, Gladiateur gla2) //lance le 1e combat : gla1[0] vs gla2[0]
         {
             Combat l_bataille1 = new Combat(gla1, gla2);
             l_bataille1.triArmeAttDef();
             l_bataille1.quiCommence();
             l_bataille1.Attaquer();
-			
-			if (gla1.Vie == 0) 
+
+			//Console.WriteLine (gla1.Vie);
+			//Console.WriteLine(gla2.Vie);
+
+			if (gla1.Vie == 0 && gla2.Vie == 1) 
 			{
 				this.recupGlaMort (gla1);
 			}
 
-			if (gla2.Vie == 0) 
+			if (gla2.Vie == 0 && gla1.Vie == 1) 
 			{
 				this.recupGlaMort (gla2);
+			}
+
+			if (gla2.Vie == 0 && gla1.Vie == 0) 
+			{
+				this.recupGlasMorts (gla1, gla2);
 			}
         }
 
@@ -101,36 +113,93 @@ namespace Gladiateur
             //test si glaMort fait partie de _listeGladiateur1
             foreach (Gladiateur b_gla in _listeGladiateur1)
             {
+				//Console.WriteLine (b_gla);
+				//Console.WriteLine (glaMort);
                 if (b_gla == glaMort)
                 {
 					this.nextRound (b_gla);
                 }
             }
+
+			foreach (Gladiateur b_gla in _listeGladiateur2)
+			{
+				if (b_gla == glaMort)
+				{
+					this.nextRound (b_gla);
+				}
+			}
         }
 
-        public void nextRound() //quand un gla meurt, lance le combat suivant
+		public void recupGlasMorts(Gladiateur glaMort1, Gladiateur glaMort2) //récupère le glaMort et vérifie si il fait partie de eq1 ou eq2 (on l'appelera dans la classe Combat)
+		{
+
+			this._index1++;
+			this._index2++;
+
+			if (this._index1 == 3 && this._index2 < 3) 
+			{
+				Message.showMessage("L'équipe "+_eq2.Nom+" a vaincu l'équipe "+_eq1.Nom+" !");
+			}
+
+			if (this._index2 == 3 && this._index1 < 3) 
+			{
+				Message.showMessage("L'équipe "+_eq1.Nom+" a vaincu l'équipe "+_eq2.Nom+" !");
+			}
+
+			if (this._index1 == 3 && this._index2 == 3) 
+			{
+				Message.showMessage("Les équipes "+_eq1.Nom+" et "+_eq2.Nom+" n'ont plus de gladiateurs valides. Le duel se termine sur un match nul !");
+			}
+
+			if (this._index1 < 3 && this._index2 < 3) 
+			{
+				this.launchRound(_listeGladiateur1[this._index1], _listeGladiateur2[this._index2]);
+			}
+
+		}
+
+        public void nextRound(Gladiateur glaMort) //quand un gla meurt, lance le combat suivant
         {
-			//Mort gladiateur    
-			//si gla1[i] est mort (Combat)
-			//gla1[i+1] vs gla2[j]
+			foreach (Gladiateur b_gla in _listeGladiateur1)
+			{
+				Console.WriteLine (b_gla.Nom);
+				Console.WriteLine (glaMort.Nom);
+				if (b_gla == glaMort)
+				{
+					int index = _listeGladiateur1.IndexOf(b_gla);
+					Console.WriteLine ("L'index :");
+					Console.WriteLine (index);
+					this.launchRound(_listeGladiateur1[index+1], _listeGladiateur2[this._index2]);
+					this._index1 = index + 1;
+				}
+			}
 
-			//si gla2[i] est mort (Combat)
-			//gla1[i] vs gla2[j+1]
+			foreach (Gladiateur b_gla in _listeGladiateur2)
+			{
+				Console.WriteLine (b_gla.Nom);
+				Console.WriteLine (glaMort.Nom);
+				if (b_gla == glaMort)
+				{
+					int index = _listeGladiateur2.IndexOf(b_gla);
+					this.launchRound(_listeGladiateur1[this._index1], _listeGladiateur2[index+1]);
+					this._index2 = index + 1;
+				}
+			}
 
+			if (this._index1 == 3 && this._index2 < 3) 
+			{
+				Message.showMessage("L'équipe "+_eq2.Nom+" a vaincu l'équipe "+_eq1.Nom+" !");
+			}
 
-			//Fin combat 
-			//si gla1[i] == 3
-			//joueur2 gagne
-			//joueur2 victoire++ et match_joue++
-			//joueur1 défaite++ et match_joue++
+			if (this._index2 == 3 && this._index1 < 3) 
+			{
+				Message.showMessage("L'équipe "+_eq1.Nom+" a vaincu l'équipe "+_eq2.Nom+" !");
+			}
 
-
-			//si gla2[i] == 3
-			//joueur1 gagne
-			//joueur1 victoire++ et match_joue++
-			//joueur2 défaite++ et match_joue++
-
-
+			if (this._index1 == 3 && this._index2 == 3) 
+			{
+				Message.showMessage("Les équipes "+_eq1.Nom+" et "+_eq2.Nom+" n'ont plus de gladiateurs valides. Le duel se termine sur un match nul !");
+			}
         }
     }
 }
