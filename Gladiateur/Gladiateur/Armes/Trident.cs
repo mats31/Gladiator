@@ -9,13 +9,15 @@ namespace Gladiateur.Armes
 			:base("trident",7,true,true,3,40) 
 		{
 		}
-
+		Random rand = new Random();
 		//Méthode
 		public override bool Attaquer()
 		{
-			Random rand = new Random();
 			int randomNumber = rand.Next (0, 100);
-
+			Console.WriteLine ("Voilà la valeur de randomNumber du trident :");
+			Console.WriteLine (randomNumber);
+			Console.WriteLine ("Voilà la valeur de pcTouche du trident :");
+			Console.WriteLine (this.Pc_touche);
 			if (Pc_touche >= randomNumber) 
 			{
 				return true;
@@ -30,8 +32,9 @@ namespace Gladiateur.Armes
 		}
 		public override bool Defendre()
 		{
-			Random rand = new Random();
 			int randomNumber = rand.Next (0, 100);
+			Console.WriteLine ("Voilà la valeur de randomNumber de défense du trident :");
+			Console.WriteLine (randomNumber);
 			if (Pc_touche >= randomNumber) 
 			{
 				return true;

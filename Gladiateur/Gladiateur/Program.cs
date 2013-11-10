@@ -132,14 +132,13 @@ namespace Gladiateur
 
 		//Combat
 
-/*			Combat l_bataille1 = new Combat (l_rose,l_rondo);
+			Combat l_bataille1 = new Combat (l_rose,l_rondo);
 			Message.showMessage(l_bataille1.triArmeAttDef());
 			//Message.showMessage(l_bataille1.quiCommence());
 			Message.showMessage(l_bataille1.Attaquer());
-*/
 
-        //Round
-            Round l_round1 = new Round(l_bulls, l_celtics);
+		//Round
+		//	Round l_round1 = new Round(l_bulls, l_celtics);
         }
     }
 }

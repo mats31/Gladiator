@@ -10,11 +10,11 @@ namespace Gladiateur.Armes
 		{
 		}
 
+		Random rand = new Random();
 		//Méthode
 		public override bool Attaquer()
 		{
-			Random rand = new Random();
-			int randomNumber = rand.Next (0, 100);
+			int randomNumber = 9;
 
 			if (Pc_touche >= randomNumber) 
 			{

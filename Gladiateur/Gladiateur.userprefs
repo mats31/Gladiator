@@ -1,12 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Gladiateur/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Gladiateur/Round.cs">
     <Files>
-      <File FileName="Gladiateur/Program.cs" Line="135" Column="35" />
-      <File FileName="Gladiateur/Round.cs" Line="90" Column="6" />
-      <File FileName="Gladiateur/Combat.cs" Line="211" Column="30" />
+      <File FileName="Gladiateur/Program.cs" Line="98" Column="24" />
+      <File FileName="Gladiateur/Round.cs" Line="178" Column="5" />
+      <File FileName="Gladiateur/Combat.cs" Line="204" Column="4" />
       <File FileName="Gladiateur/Armes/Arme.cs" Line="1" Column="1" />
-      <File FileName="Gladiateur/Equipe.cs" Line="113" Column="27" />
+      <File FileName="Gladiateur/Equipe.cs" Line="1" Column="1" />
+      <File FileName="Gladiateur/Armes/Dague.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +16,7 @@
             <Node name="Armes" expanded="True">
               <Node name="Interface" expanded="True" />
             </Node>
-            <Node name="Program.cs" selected="True" />
+            <Node name="Round.cs" selected="True" />
           </Node>
         </State>
       </Pad>
@@ -31,7 +32,12 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/mathis/Developpement/Gladiator/Gladiateur/Gladiateur/Round.cs" line="114" column="1" />
+      <Breakpoint file="/Users/mathis/Developpement/Gladiator/Gladiateur/Gladiateur/Round.cs" line="164" column="1" />
+      <Breakpoint file="/Users/mathis/Developpement/Gladiator/Gladiateur/Gladiateur/Round.cs" line="137" column="1" />
+      <Breakpoint file="/Users/mathis/Developpement/Gladiator/Gladiateur/Gladiateur/Round.cs" line="185" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
